@@ -23,23 +23,27 @@
       flex-direction: column;
     }
   </style>
+  <h1>SVG Zoo</h1>
   <ol>
     <li><a href="https://www.w3.org/TR/SVG/filters.html">W3C: Filter Effects</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#Filter_primitive_elements">Filter primitive elements</a></li>
   </ol>
-
   <article data-id="svgfilter">
-    <svg width="320" height="320" viewBox="0 0 220 220"
-         xmlns="http://www.w3.org/2000/svg">
+    <svg width="320" height="320" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
       <filter id="displacementFilter">
-        <feTurbulence type="turbulence" baseFrequency="0.05"
-            numOctaves="3" result="turbulence"/>
-        <feDisplacementMap in2="turbulence" in="SourceGraphic"
-            scale="30" xChannelSelector="R" yChannelSelector="G"/>
+        <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="3" result="turbulence"/>
+        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
       </filter>
-
-      <circle cx="100" cy="100" r="100"
-          style="filter: url(#displacementFilter)"/>
+      <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)"/>
+    </svg>
+  </article>
+  <article data-id="svgfilter">
+    <svg width="320" height="320" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+      <filter id="blurFilter">
+        <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="3" result="turbulence"/>
+        <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+      </filter>
+      <circle cx="110" cy="110" r="100" style="filter: url(#blurFilter)" />
     </svg>
   </article>
 </html>

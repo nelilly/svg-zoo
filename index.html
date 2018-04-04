@@ -1,0 +1,45 @@
+<html>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
+    html { background-color: #e4e4e4; padding: 1rem; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; font-weight: 400; }
+
+    input {
+      font-size: 1rem;
+      padding: 0.25rem;
+    }
+
+    article {
+      display: inline-block;
+      width: 25%;
+    }
+
+    label {
+      display: block;
+      padding: 0.25rem;
+    }
+    .console {
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <ol>
+    <li><a href="https://www.w3.org/TR/SVG/filters.html">W3C: Filter Effects</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#Filter_primitive_elements">Filter primitive elements</a></li>
+  </ol>
+
+  <article data-id="svgfilter">
+    <svg width="320" height="320" viewBox="0 0 220 220"
+         xmlns="http://www.w3.org/2000/svg">
+      <filter id="displacementFilter">
+        <feTurbulence type="turbulence" baseFrequency="0.05"
+            numOctaves="3" result="turbulence"/>
+        <feDisplacementMap in2="turbulence" in="SourceGraphic"
+            scale="30" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+
+      <circle cx="100" cy="100" r="100"
+          style="filter: url(#displacementFilter)"/>
+    </svg>
+  </article>
+</html>

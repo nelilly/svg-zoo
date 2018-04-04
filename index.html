@@ -10,6 +10,10 @@
       font-size: 1rem;
       padding: 0.25rem;
     }
+    
+    main {
+      display: flex;
+    }
 
     article {
       display: inline-block;
@@ -26,14 +30,17 @@
       flex-direction: column;
     }
   </style>
+  <header>
   <h1>SVG Zoo</h1>
   <p>an establishment that maintains a collection of wild SVGs for study, conservation, or display to the public.</p>
   <ol>
     <li><a href="https://www.w3.org/TR/SVG/filters.html">W3C: Filter Effects</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#Filter_primitive_elements">Filter primitive elements</a></li>
   </ol>
+  </header>
+  <main>
   <article data-id="svgfilter">
-    <svg width="320" height="320" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
       <filter id="displacementFilter">
         <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="3" result="turbulence"/>
         <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
@@ -42,7 +49,7 @@
     </svg>
   </article>
   <article data-id="svgfilter">
-    <svg width="320" height="320" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
       <filter id="blurFilter">
         <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
       </filter>
@@ -50,7 +57,7 @@
     </svg>
   </article>
   <article data-id="svgfilter">
-    <svg width="320" height="320" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
       <filter id="dropShadowFilter">
         <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
         <feOffset dx="2" dy="4" />
@@ -62,4 +69,5 @@
       <circle cx="110" cy="110" r="100" style="filter: url(#dropShadowFilter)" />
     </svg>
   </article>
+  </main>
 </html>

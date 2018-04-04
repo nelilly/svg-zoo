@@ -40,8 +40,7 @@
   <article data-id="svgfilter">
     <svg width="320" height="320" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
       <filter id="blurFilter">
-        <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="3" result="turbulence"/>
-        <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
       </filter>
       <circle cx="110" cy="110" r="100" style="filter: url(#blurFilter)" />
     </svg>

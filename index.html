@@ -17,7 +17,7 @@
 
     article {
       display: inline-block;
-      width: 25%;
+      flex: 1 1 auto;
     }
 
     label {
@@ -29,14 +29,13 @@
       display: flex;
       flex-direction: column;
     }
+    svg {
+      fill: #999;
+    }
   </style>
   <header>
   <h1>SVG Zoo</h1>
   <p>an establishment that maintains a collection of wild SVGs for study, conservation, or display to the public.</p>
-  <ol>
-    <li><a href="https://www.w3.org/TR/SVG/filters.html">W3C: Filter Effects</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#Filter_primitive_elements">Filter primitive elements</a></li>
-  </ol>
   </header>
   <main>
   <article data-id="svgfilter">
@@ -70,4 +69,11 @@
     </svg>
   </article>
   </main>
+  <footer>
+    <ol>
+      <li><a href="https://www.w3.org/TR/SVG/filters.html">W3C: Filter Effects</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#Filter_primitive_elements">Filter primitive elements</a></li>
+    </ol>
+    <p><a href="http://nelilly.greententacles.com/">N.E. Lilly</a> &copy;2018</p>
+  </footer>
 </html>

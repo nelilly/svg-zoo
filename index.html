@@ -8,92 +8,654 @@
     <meta name="robots" content="index, follow, archive">
     <meta name="theme-color" content="#000000">
     <meta name="keywords" content="SVG, SVG Filters, SVG Tutorials" /> 
-    <meta name="description" content="SVG ZOO: an establishment that maintains a collection of wild SVGs for study, conservation, or display to the public." /> 
-    <title>SVG ZOO: an establishment that maintains a collection of wild SVGs for study, conservation, or display to the public.</title>
+    <meta name="description" content="SVG ZOO: an establishment that maintains a collection of wild SVGs for study, conservation, and display to the public." /> 
+    <meta name="author" content="N.E. Lilly">
+    <title>SVG ZOO: an establishment that maintains a collection of wild SVGs for study, conservation, and display to the public.</title>
+    <link href="base.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
     <style>
       @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
-      html { background-color: #f4f4f4; padding: 1rem; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; font-weight: 400; }
+      *, *:after, *:before { box-sizing: inherit; }
+      html { 
+        line-height: 1.15; /* 1 */
+        -ms-text-size-adjust: 100%; /* 2 */
+        -webkit-text-size-adjust: 100%; /* 2 */
+        -moz-box-sizing: border-box; box-sizing: border-box; -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased; 
+        background: #f3f7f3; 
+        box-sizing: border-box; 
+        font-family: 'Source Sans Pro', sans-serif; 
+        font-size: 18px; 
+        font-weight: 400; 
+        margin: 0 auto; 
+        max-width: 1280px; 
+        padding: 0 1rem;
+        background-image: -moz-linear-gradient(top, #f3f7f3 9%, #e3f5ab 33%, #c9dd7e 54%, #f3f7f3 62%);
+        background-image: -webkit-linear-gradient(top, #f3f7f3 9%,#e3f5ab 33%,#c9dd7e 54%,#f3f7f3 62%);
+        background-image: linear-gradient(to bottom, #f3f7f3 9%,#e3f5ab 33%,#c9dd7e 54%,#f3f7f3 62%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f7f3', endColorstr='#f3f7f3',GradientType=0 );
+        background-repeat: repeat-x;
+        background-size: 100% 800px;
+      }
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+      body {
+        margin: 0;
+      }
+      h1{
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        margin: 0 0 0.5rem;
+        padding: 0;
+      }
+
+      ul,
+      ol {
+        padding: 0 0 0 1rem;
+        margin: 0;
+      }
+
+      li {
+        padding-bottom: 1rem;
+      }
+
+      nav a {
+        text-decoration: none;
+      }
 
       input {
         font-size: 1rem;
         padding: 0.25rem;
       }
 
+      figure-caption {
+        display: block;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
       .zoo {
         display: flex;
       }
 
-      article[data-id=svgfilter] {
-        display: inline-block;
-        flex: 1 1 auto;
+      .zoo article[data-id=animal] {
+        flex: 1 0 25%;
+        text-align: center;
+      }
+
+      .patterns {
+        align-content: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .patterns figure {
+        align-content: flex-start;
+        flex: 1 0 16.66%;
+        padding: 0 0 3rem 0;
+        margin: 0;
+        text-align: center;
       }
 
       label {
         display: block;
         padding: 0.25rem;
       }
+      
       .console {
         width: 320px;
         display: flex;
         flex-direction: column;
       }
+
       svg {
-        fill: #999;
+        fill: #333;
       }
+      
+      .light { 
+        background-color: rgb(248, 248, 248); 
+        border-bottom: 1px solid #fff; 
+        border-radius: 1em;
+        border-top: 1px solid #fff; 
+        box-shadow: 0px 0px .25em rgba(0,0,0,0.1), 0px .25em .5em rgba(0,0,0,0.1); 
+        box-shadow: 0px 0px 1.5em rgba(0,0,0,0.1), 0px 1em 2em rgba(0,0,0,0.1);
+        color: rgba(0,0,0,0.87); 
+        margin: 0 0 1rem 0;
+        padding: 1em;
+        transition: 0.2s box-shadow ease-out, 0.2s color ease-out, 0.2s background-color ease-out, 0.2s transform ease-out; 
+      }
+
+      header.light {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-bottom: 2rem;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      footer > section.light {
+        flex: 1 1 auto;
+      }
+
+      @media only screen and (min-width: 768px) {
+
+        footer > section.light {
+          margin: 1rem;
+        }
+          
+        footer > section.light:first-of-type {
+          margin-left: 0;
+          width: calc( 66% - 1rem );
+        }
+
+        footer > section.light:nth-of-type(2) {
+          margin: 1rem 0;
+          width: 33%;
+        }
+
+        footer .copyright {
+          width: 100%;
+        }
+      }
+
     </style>
   </head>
-  <main>
-    <header>
-    <h1>SVG Zoo</h1>
-    <p>an establishment that maintains a collection of wild SVGs for study, conservation, or display to the public.</p>
-    </header>
+  <header class="light">
+    <h1>SVG ZOO</h1>
+    <p>an establishment that maintains a collection of wild SVGs for study, conservation, and display to the public.</p>
+  </header>
+  <main role="main">
     <article>
       <section class="zoo">
-        <article data-id="svgfilter">
-          <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-            <filter id="displacementFilter">
-              <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="3" result="turbulence"/>
-              <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-            <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)"/>
-          </svg>
+        <article data-id="animal">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="-5 0 60 54">
+            <g><path fill="url(#zebra)" style="filter: url(#blurFilter)" fill-rule="evenodd" clip-rule="evenodd" d="M44.475,13.402c-0.532,0-0.962-0.43-0.962-0.962c0-0.531,0.43-0.962,0.962-0.962   c0.531,0,0.962,0.431,0.962,0.962C45.437,12.972,45.007,13.402,44.475,13.402 M5.124,20.049c-0.744,1.766-1.262,4.421-1.926,6.441   c-0.718,2.185-1.382,3.729-3.061,6.372c-0.261,0.412-0.139,0.959,0.273,1.22c0.412,0.261,0.959,0.139,1.22-0.273   c1.434-2.257,2.165-3.75,2.791-5.453v2.784v14.47c0,0.344,0.275,0.6,0.615,0.6h4.58c0.344,0,0.6-0.276,0.6-0.616V36.01   c0-0.488,0.241-1.356,0.553-2.258c0.055-0.157,0.676-1.759,1.057-2.625c0.509-1.161,1.44-1.786,2.765-1.458l11.964,2.977   c0.586,0.446,1.041,0.988,1.353,1.601c0.914,1.794,0.497,9.014,0.497,11.361c0,0.333,0.287,0.6,0.616,0.6h4.58   c0.343,0,0.599-0.276,0.599-0.616v-9.959c0-2.311,0.756-3.596,2.11-5.34c1.515-1.95,3.032-3.904,4.622-10.995   c0.11-0.179,0.316-0.225,0.5-0.126c0.353,0.197,0.724,0.401,1.116,0.592c0.394,0.191,0.789,0.356,1.163,0.463l2.7,0.775   c0.49,0.141,1.004,0.053,1.485-0.185c0.909-0.45,1.722-1.449,2.002-2.422c0.147-0.513,0.143-1.025-0.071-1.458l-2.812-5.682   c-0.345-0.697-0.993-1.427-1.634-2.151c-0.68-0.768-1.359-1.534-1.525-2.093l-0.698-2.347c-0.277-0.934-1.176-1.142-1.878-0.52   l-2.49,2.213l-0.336-0.323c-0.402-0.386-1.048-0.401-1.467-0.036l-7.816,6.791c-0.199,0.173-0.331,0.274-0.619,0.285l-4.609,0.235   c-0.573,0.027-1.03,0.502-1.033,1.076l-0.002,0.192l-9.055-0.144C10.064,14.378,6.61,16.526,5.124,20.049z"/></g></svg>
         </article>
-        <article data-id="svgfilter">
-          <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-            <filter id="blurFilter">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
-            </filter>
-            <circle cx="110" cy="110" r="100" style="filter: url(#blurFilter)" />
-          </svg>
+        <article data-id="animal">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="-5 0 60 54">
+            <g><path fill="url(#giraffe)" d="M35.668,5.863c-0.401,0-0.725-0.325-0.725-0.726c0-0.401,0.324-0.727,0.725-0.727   c0.401,0,0.726,0.325,0.726,0.727C36.394,5.538,36.069,5.863,35.668,5.863 M30.685,6.499l-7.301,12.939l-7.734,3.738   c-1.339,0.646-2.543,1.486-3.378,2.566c-0.954,1.233-1.44,3.085-1.708,4.618c-0.266,1.524-0.563,3.216-1.082,4.413L8.36,37.359   c-0.194,0.451,0.013,0.975,0.463,1.169c0.451,0.194,0.975-0.014,1.169-0.464l1.123-2.587c0.131-0.302,0.249-0.621,0.354-0.951   c0.106,0.529,0.18,1.08,0.124,1.723l-0.517,5.919v7.226c0,0.336,0.289,0.605,0.621,0.605h3.911c0.347,0,0.606-0.278,0.606-0.621   v-8.081c0.611-1.239,1.089-2.26,1.475-3.353c0.404-1.145,0.704-2.36,0.951-3.968c0.046-0.322,0.353-0.272,0.413-0.238   c0.675,0.26,1.327,0.447,1.998,0.579c0.666,0.129,1.047,0.188,1.802,0.23c0.132,0,0.176,0.153,0.227,0.31   c0.179,0.553,0.295,1.283,0.295,1.514v13.023c0,0.347,0.279,0.605,0.621,0.605h3.911c0.336,0,0.605-0.289,0.605-0.621v-7.156   l0.693-2.79c1.543-6.184,2.477-9.926,2.743-16.761c0.092-2.352,2.129-7.305,3.492-10.62l0.569-1.389l3.911-0.255   c0.317-0.02,0.611-0.126,0.859-0.301c0.258-0.183,0.468-0.445,0.583-0.739l0.214-0.503c0.142-0.333,0.172-0.689,0.097-1.024   c-0.075-0.334-0.256-0.642-0.528-0.883L36.32,2.7c-0.134-0.119-0.278-0.223-0.435-0.31V0.605C35.885,0.272,35.614,0,35.28,0   c-0.334,0-0.605,0.272-0.605,0.605V2.14L34.01,2.143V0.605C34.01,0.272,33.739,0,33.405,0C33.071,0,32.8,0.272,32.8,0.605v1.842   c-0.217,0.216-0.37,0.525-0.52,0.793c-0.939-0.248-1.898-0.317-2.739,0.27c-0.593,0.413,0.038,1.548,0.304,1.982   C30.051,5.829,30.323,6.166,30.685,6.499z"/></g></svg>
         </article>
-        <article data-id="svgfilter">
-          <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-            <filter id="dropShadowFilter">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-              <feOffset dx="2" dy="4" />
-              <feMerge>
-                  <feMergeNode />
-                  <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-            <circle cx="110" cy="110" r="100" style="filter: url(#dropShadowFilter)" />
+        <article data-id="animal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 0 60 54">
+            <g><path fill="url(#hyena)" d="M41.308,14.098c0-0.601,0.486-1.088,1.087-1.088c0.6,0,1.088,0.488,1.088,1.088   c0,0.599-0.488,1.088-1.088,1.088C41.794,15.186,41.308,14.697,41.308,14.098 M16.382,13.695c-3.419,0.202-6.776,1.901-8.411,5.001   c-0.746,1.413-1.072,2.998-1.368,4.878c-0.184,1.174-0.371,2.357-0.675,3.353c-0.337,1.11-0.953,1.754-1.616,2.023   c-0.607,0.246-1.33,0.203-1.869-0.185c-0.392-0.282-0.659-0.739-0.67-1.325c-0.008-0.489-0.411-0.88-0.9-0.872   c-0.489,0.007-0.88,0.411-0.873,0.9c0.022,1.199,0.586,2.145,1.408,2.736c1.036,0.747,2.395,0.872,3.572,0.395   c1.116-0.454,2.13-1.465,2.644-3.156c0.135-0.444,0.248-0.908,0.346-1.383c0.248,1.929-0.089,3.106-0.439,4.33   c-0.308,1.083-0.629,2.204-0.629,3.844v7.278c0,0.342,0.258,0.619,0.603,0.619h3.897c0.341,0,0.618-0.257,0.618-0.603v-7.93   c0-2.009,1.706-3.284,3.305-4.478l0.966-0.739c0.522-0.416,1.104-0.669,1.708-0.765c0.634-0.1,1.305-0.033,1.971,0.191l6.126,2.053   c1.114,0.374,2.016,1.078,2.641,1.98c0.644,0.93,1.001,2.078,1.001,3.3v6.372c0,0.342,0.258,0.619,0.603,0.619h3.896   c0.342,0,0.619-0.257,0.619-0.603v-6.702c0-2.618,1.724-4.19,3.532-5.835l0.765-0.705c1.912-1.794,2.474-3.556,3.164-5.721   l0.31-0.96c0.249-0.751,1.399-0.711,2.005-0.532c0.851,0.253,1.621,0.613,2.519,0.325c0.423-0.137,0.813-0.395,1.06-0.748   l1.402-2.006c0.568-0.813,0.515-1.952-0.157-2.688l-3.43-3.762l-0.079-1.18c-0.026-0.376-0.154-0.723-0.363-1.01   c-0.208-0.285-0.499-0.512-0.85-0.651c-7.252-2.878-10.839-1.055-13.587,1.17c-1.073,0.868-2.123,1.929-3.254,2.692   C26.97,13.836,26,14.235,24.84,14.159l-7.013-0.461C17.362,13.668,16.876,13.666,16.382,13.695z"/></svg>
+        </article>
+        <article data-id="animal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 0 60 54">
+            <path fill="url(#elephant)" d="M39.79,12.539c0-0.602,0.487-1.09,1.089-1.09c0.602,0,1.09,0.488,1.09,1.09   c0,0.602-0.488,1.089-1.09,1.089C40.278,13.628,39.79,13.141,39.79,12.539 M6.031,11.504C4.274,13.211,2.962,15.4,2.287,17.85   c-0.645,2.345-0.728,3.843-0.757,6.239c-0.018,1.359-0.105,2.555-0.261,3.587c-0.23,1.518-0.604,2.65-1.116,3.401   c-0.275,0.403-0.171,0.954,0.232,1.23c0.403,0.275,0.954,0.171,1.23-0.232C2.17,31.26,2.59,30.167,2.87,28.79   c0.205,0.51,0.447,1.041,0.725,1.63c0.362,0.764,0.623,1.507,0.794,2.264c0.168,0.753,0.248,1.535,0.248,2.384v8.211   c0,0.366,0.299,0.614,0.654,0.598l5.712,0c0.329,0,0.598-0.268,0.598-0.598l0.002-6.701c0-1.284,0.365-3.474,1.295-5.153   c0.604-1.089,1.446-1.951,2.572-2.139c1.012-0.168,2.059-0.197,3.12-0.224c2.23-0.06,4.526-0.121,6.859-1.394   c0.305-0.166,0.493-0.034,0.638,0.232c0.182,0.332,0.335,0.816,0.496,1.318c0.151,0.476,0.309,0.971,0.509,1.418   c0.303,0.675,0.523,1.329,0.665,1.997c0.142,0.663,0.209,1.35,0.209,2.094v8.551c0,0.366,0.298,0.614,0.654,0.598l5.685,0   c0.354,0,0.6-0.286,0.6-0.626v-6.005c0-1.32,0.096-3.175,0.25-5.17c0.163-2.085,0.389-4.309,0.637-6.232   c0.12-0.932,0.791-1.151,1.642-1.08c0.875,0.074,1.509,0.036,2.066-0.013c0.405-0.037,0.813-0.085,1.218-0.087   c1.035-0.005,1.972,0.721,2.649,1.755c0.456,0.695,0.789,1.527,0.959,2.377c0.168,0.841,0.175,1.694-0.02,2.44   c-0.248,0.951-0.838,1.74-1.861,2.104c-0.274,0.096-0.433,0.372-0.393,0.65l0.268,2.807c0.037,0.389,0.36,0.565,0.713,0.536   c6.639-0.61,7.337-7.283,6.836-13.181c-0.177-2.093-0.511-4.096-0.77-5.659c-0.21-1.259-0.371-2.48-0.72-3.716   c-1.031-3.647-3.02-5.969-5.421-7.285c-2.392-1.309-5.177-1.603-7.816-1.207C34.5,6.382,33.857,6.522,33.23,6.7   c-3.214,0.906-5.889,1.289-8.542,1.387c-2.658,0.099-5.332-0.089-8.509-0.318l-0.964-0.036C11.651,7.733,8.427,9.173,6.031,11.504z   "/>
           </svg>
         </article>
       </section>
-      <section>
-        <h2>Tutorials</h2>
-        <ol>
-          <li><a href="#">???</a></li>
-        </ol>
+
+      <section class="light">
+        <h2>Patterns<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/pattern"></a></h2>
+        <section class="patterns">
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="zebra" x="0" y="0" width="4" height="10" patternTransform="skewX(-15)" patternUnits="userSpaceOnUse">
+                  <path fill="#eee" d="M0,0v10h10,v-10z"/>
+                  <path d="M2,0v10h2,v-10z"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#zebra)"/>
+            </svg>
+            <figure-caption>zebra</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="ladybug" width=".250" height=".250" patternContentUnits="objectBoundingBox">
+                  <path fill="#c00" d="M0,0v1h1,v-1z"/>
+                  <circle cx=".125" cy=".125" r=".0666"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#ladybug)"/>
+            </svg>
+            <figure-caption>ladybug</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="panda" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path fill="#222" d="M0,0v30h30,v-30z"/>
+                  <path fill="#eee" d="M0,0v15h15,v-15z"/>
+                  <path fill="#eee" d="M15,15v30h30,v-30z"/>
+                  <circle fill="#222" cx="7.5" cy="7.5" r="6"/>
+                  <circle fill="#222" cx="22.5" cy="22.5" r="6"/>
+                  <circle fill="#eee" cx="22.5" cy="7.5" r="6"/>
+                  <circle fill="#eee" cx="7.5" cy="22.5" r="6"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#panda)"/>
+            </svg>
+            <figure-caption>panda</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="giraffe" patternTransform="skewY(15)" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path fill="#c60" d="M0,0v10h10,v-10z"/>
+                  <circle fill="none" stroke="#ce0" stroke-width="3" cx="5" cy="5" r="4"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#giraffe)"/>
+            </svg>
+            <figure-caption>giraffe</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="tiger" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path fill="#f90" d="M0,0v30h30,v-30z"/>
+                  <path fill="none" stroke="#333" stroke-width="10" stroke-linecap="square" d="M0,7l15,15l15,-15"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#tiger)"/>
+            </svg>
+            <figure-caption>tiger</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="gator" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path fill="#0f9" d="M0,0v30h30,v-30z"/>
+                  <path fill="none" stroke="#090" stroke-width="10" stroke-linecap="square" d="M0,7q15,15 30,0"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#gator)"/>
+            </svg>
+            <figure-caption>gator</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="redfish" width="30" height="30" patternTransform="rotate(90 60 60)" patternUnits="userSpaceOnUse">
+                  <path fill="#c00" d="M0,0v30h30,v-30z"/>
+                  <path fill="none" stroke="#900" stroke-width="7.5" stroke-linecap="square" d="M0,4q15,15 30,0"/>
+                  <path fill="none" stroke="#900" stroke-width="7.5" stroke-linecap="square" d="M15,19q15,15 30,0"/>
+                  <path fill="none" stroke="#900" stroke-width="7.5" stroke-linecap="square" d="M-15,19q15,15 30,0"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#redfish)"/>
+            </svg>
+            <figure-caption>redfish</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="bluefish" width="30" height="30" patternTransform="rotate(-90 60 60)" patternUnits="userSpaceOnUse">
+                  <path fill="#09f" d="M0,0v30h30,v-30z"/>
+                  <path fill="none" stroke="#009" stroke-width="7.5" stroke-linecap="square" d="M0,4q15,15 30,0"/>
+                  <path fill="none" stroke="#009" stroke-width="7.5" stroke-linecap="square" d="M15,19q15,15 30,0"/>
+                  <path fill="none" stroke="#009" stroke-width="7.5" stroke-linecap="square" d="M-15,19q15,15 30,0"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#bluefish)"/>
+            </svg>
+            <figure-caption>bluefish</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="goldfish" width="30" height="30" patternTransform="rotate(45 60 60)" patternUnits="userSpaceOnUse">
+                  <path fill="#f90" d="M0,0v30h30,v-30z"/>
+                  <path fill="none" stroke="#fc0" stroke-width="7.5" stroke-linecap="square" d="M0,4q15,15 30,0"/>
+                  <path fill="none" stroke="#fc0" stroke-width="7.5" stroke-linecap="square" d="M15,19q15,15 30,0"/>
+                  <path fill="none" stroke="#fc0" stroke-width="7.5" stroke-linecap="square" d="M-15,19q15,15 30,0"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#goldfish)"/>
+            </svg>
+            <figure-caption>goldfish</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="moonfish" width="30" height="30" patternTransform="rotate(-135 60 60)" patternUnits="userSpaceOnUse">
+                  <path fill="#cdc" d="M0,0v30h30,v-30z"/>
+                  <path fill="none" stroke="#efe" stroke-width="7.5" stroke-linecap="square" d="M0,4q15,15 30,0"/>
+                  <path fill="none" stroke="#efe" stroke-width="7.5" stroke-linecap="square" d="M15,19q15,15 30,0"/>
+                  <path fill="none" stroke="#efe" stroke-width="7.5" stroke-linecap="square" d="M-15,19q15,15 30,0"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#moonfish)"/>
+            </svg>
+            <figure-caption>moonfish</figure-caption>
+          </figure>
+        </section>
+
+          <h2>Filter Patterns</h2>
+        <section class="patterns">
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="hyenaPelt">
+                  <feFlood
+                      flood-color="rgb(188,207,148)"
+                      result="result21" />
+                  <feFlood
+                      flood-color="rgb(116,132,62)"
+                      result="result22" />
+                  <feFlood
+                      flood-color="rgb(98,100,63)"
+                      result="result23" />
+                  <feFlood
+                      result="result17"
+                      baseFrequency="0.53 0.30"
+                      flood-opacity="1"
+                      flood-color="rgb(143,155,102)" />
+                  <feTurbulence
+                      numOctaves="2.17"
+                      baseFrequency="0.07"
+                      result="result27" />
+                  <feTurbulence
+                      numOctaves="2.93"
+                      baseFrequency="0.04"
+                      result="result28" />
+                  <feTurbulence
+                      numOctaves="3"
+                      baseFrequency="0.053"
+                      result="result29" />
+                  <feColorMatrix
+                      numOctaves="2"
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -35 "
+                      result="result14"
+                      in="result27" />
+                  <feColorMatrix
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -28 "
+                      result="result15"
+                      in="result28" />
+                  <feColorMatrix
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -45 "
+                      result="result16"
+                      in="result29"
+                      baseFrequency="0.33" />
+                  <feTurbulence
+                      numOctaves="2"
+                      result="result12"
+                      baseFrequency="0.02"
+                      scale="9"
+                      type="fractalNoise" />
+                  <feTurbulence
+                      numOctaves="2.35"
+                      result="result13"
+                      baseFrequency="0.25"
+                      type="fractalNoise" />
+                  <feTurbulence
+                      result="result1"
+                      numOctaves="2"
+                      baseFrequency="0.022"
+                      type="fractalNoise" />
+                  <feComposite
+                      result="result19"
+                      in2="result14"
+                      in="result21"
+                      operator="in"
+                      scale="0.5"
+                      baseFrequency="0.25" />
+                  <feComposite
+                      in="result22"
+                      operator="in"
+                      in2="result15"
+                      result="result24" />
+                  <feComposite
+                      in2="result16"
+                      in="result23"
+                      operator="in"
+                      result="result25" />
+                  <feDisplacementMap
+                      in2="result12"
+                      result="result2"
+                      in="result19"
+                      scale="6.96"
+                      xChannelSelector="R"
+                      baseFrequency="0.38" />
+                  <feDisplacementMap
+                      in2="result13"
+                      result="result3"
+                      in="result24"
+                      scale="19.27"
+                      xChannelSelector="B" />
+                  <feDisplacementMap
+                      in2="result1"
+                      result="result4"
+                      in="result25"
+                      scale="17" />
+                  <feComposite
+                      result="result5"
+                      in="result2"
+                      in2="result3"
+                      operator="over" />
+                  <feComposite
+                      in2="result5"
+                      result="result6"
+                      in="result4" />
+                  <feComposite
+                      in2="result17"
+                      in="result6"
+                      result="result26" />
+                  <feTurbulence
+                      result="result8"
+                      baseFrequency="0.08"
+                      numOctaves="3" />
+                  <feTurbulence
+                      result="result11"
+                      baseFrequency="0.01"
+                      type="fractalNoise"
+                      numOctaves="5" />
+                  <feTurbulence
+                      result="result7"
+                      baseFrequency="0.07"
+                      numOctaves="5" />
+                  <feColorMatrix
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -30 "
+                      result="result30" />
+                  <feDisplacementMap
+                      in2="result8"
+                      result="result9"
+                      in="result26"
+                      scale="1.5"
+                      xChannelSelector="G" />
+                  <feDisplacementMap
+                      in2="result11"
+                      result="result10"
+                      baseFrequency="0.03"
+                      scale="10.80"
+                      xChannelSelector="R" />
+                  <feComposite
+                      in2="result30"
+                      result="result18"
+                      operator="in"
+                      baseFrequency="0.10" />
+                  <feComposite
+                      in2="result9"
+                      result="result20" />
+                  <feComposite
+                      in2="SourceGraphic"
+                      operator="in" />
+                </filter>
+                <pattern id="hyena" width="100%" height="100%" patternUnits="userSpaceOnUse">
+                  <rect style="filter:url(#hyenaPelt);" x="0" y="0" height="100%" width="100%"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#hyena)"/>
+            </svg>
+            <figure-caption>hyena</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="elephant" x="0" y="0" width="100%" height="100%">
+                    <defs>
+                        <filter id="a">
+                            <feTurbulence baseFrequency="0.15" numOctaves="8" result="noise" stitchTiles="stitch" type="fractalNoise"/>
+                            <feDiffuseLighting in="noise" lighting-color="#ccc" surfaceScale="5">
+                                <feDistantLight azimuth="45" elevation="60"/>
+                            </feDiffuseLighting>
+                        </filter>
+                        <filter id="b">
+                            <feTurbulence baseFrequency="0.5" numOctaves="24" result="noise" stitchTiles="stitch" type="fractalNoise"/>
+                            <feDiffuseLighting in="noise" lighting-color="#666" surfaceScale="9">
+                                <feDistantLight azimuth="105" elevation="120"/>
+                            </feDiffuseLighting>
+                        </filter>
+                    </defs>
+                    <rect width="100%" height="100%" filter="url(#a)" opacity="1"/>
+                    <rect width="100%" height="100%" filter="url(#b)" opacity=".5"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#elephant)"/>
+            </svg>
+            <figure-caption>elephant</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="skybuffalo" width="30" height="30" patternUnits="userSpaceOnUse">
+                </pattern>
+                <linearGradient id="skyGradient" x1="0" x2="0" y1="0" y2="1">
+                  <stop
+                    style="stop-color:#3681c8;stop-opacity:1"
+                    offset="0" />
+                  <stop
+                    style="stop-color:#ffffff;stop-opacity:1"
+                    offset="1" />
+                </linearGradient>
+                  <filter
+                    style="color-interpolation-filters:sRGB"
+                    id="cloudFilter"
+                    x="-0.5"
+                    y="-0.5"
+                    height="2"
+                    width="2">
+                    <feTurbulence
+                      result="result2"
+                      baseFrequency="0.015151515151515152"
+                      type="fractalNoise"
+                      numOctaves="10"
+                      seed="286.95652173913044" />
+                    <feTurbulence
+                      type="fractalNoise"
+                      baseFrequency="0.085000000000000006"
+                      result="result4"
+                      scale="6.7000000000000002"
+                      numOctaves="10" />
+                    <feTurbulence
+                      scale="1.8999999999999999"
+                      numOctaves="10"
+                      type="fractalNoise"
+                      baseFrequency="0.0040000000000000001 0.0059999999999999932"
+                      result="result7" />
+                    <feFlood
+                      flood-color="rgb(255,255,255)"
+                      result="result1"
+                      flood-opacity="0.77000000000000002" />
+                    <feComposite
+                      in2="result2"
+                      baseFrequency="0.032000000000000001 0.044999999999999998"
+                      operator="in"
+                      numOctaves="3"
+                      result="result3" />
+                    <feDisplacementMap
+                      baseFrequency="0.20300000000000001"
+                      in2="result4"
+                      xChannelSelector="R"
+                      yChannelSelector="G"
+                      scale="1.933701657458563"
+                      result="result6" />
+                    <feComponentTransfer
+                      numOctaves="6"
+                      result="result5"
+                      in="result7"
+                      scale="20.100000000000001">
+                      <feFuncR type="identity" />
+                      <feFuncG type="identity" />
+                      <feFuncB type="identity" />
+                      <feFuncA type="linear" slope="3.2200000000000002" intercept="-0.81000000000000005" />
+                    </feComponentTransfer>
+                    <feComposite
+                      scale="59.799999999999997"
+                      in2="result5"
+                      in="result6"
+                      operator="in"
+                      result="result8" />
+                    <feDisplacementMap
+                      in2="result4"
+                      xChannelSelector="R"
+                      yChannelSelector="G"
+                      scale="5.524861878453039"
+                      result="result9"
+                      baseFrequency="0.039" />
+                    <feComposite
+                      in2="SourceGraphic"
+                      seed="287"
+                      result="result10" />
+                    <feComposite
+                      in2="SourceGraphic"
+                      operator="in" />
+                  </filter>
+              </defs>
+              <circle cx="180" cy="180" r="180" style="fill:url(#skyGradient);filter:url(#cloudFilter);"/>
+            </svg>
+            <figure-caption>skybuffalo</figure-caption>
+          </figure>
+        </section>
       </section>
-    </article>
-    <footer>
-      <h2>Additional Resources</h2>
-      <ol>
-        <li><a href="https://www.w3.org/TR/SVG/filters.html">W3C: Filter Effects</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#Filter_primitive_elements">Filter primitive elements</a></li>
-      </ol>
-      <p><a href="http://nelilly.greententacles.com/">N.E. Lilly</a> &copy;2018</p>
-    </footer>
   </main>
+  <footer>
+    <section class="light">
+      <h2>Additional SVG Resources</h2>
+      <h3>Books</h3>
+      <ul>
+        <li><a href="https://www.amazon.com/SVG-Essentials-Producing-Scalable-Graphics/dp/1449374352/?tag=svgzoo-20"><strong>SVG Essentials: Producing Scalable Vector Graphics with XML</strong> by J. David Eisenberg and Amelia Bellamy-Royds (2014)</a></li>
+        <li><a href="https://www.amazon.com/Using-SVG-CSS3-HTML5-Graphics/dp/1491921978/?tag=svgzoo-20"><strong>Using SVG with CSS3 and HTML5: Vector Graphics for Web Design</strong> by Amelia Bellamy-Royds and Kurt Cagle (2017)</a></li>
+        <li><a href="https://www.amazon.com/SVG-Animations-Implementations-Responsive-Animation/dp/1491939702/?tag=svgzoo-20"><strong>SVG Animations: From Common UX Implementations to Complex Responsive Animation</strong> by Sarah Drasner (2017)</a></li>
+        <li><a href="https://www.amazon.com/SVG-Text-Layout-Words-Art-ebook/dp/B0170QTV06/?tag=svgzoo-20"><strong>SVG Text Layout: Words as Art</strong> by Amelia Bellamy-Royds and Kurt Cagle (2015)</a></li>
+        <li><a href="https://www.amazon.com/Practical-SVG-Chris-Coyier/dp/193755743X/?tag=svgzoo-20"><strong>Practical SVG</strong> by Chris Coyier (2016)</a></li>
+      </ul>
+
+      <h3>Websites</h3>
+      <ol>
+        <li><a href="https://www.w3.org/TR/SVG/">W3C: Scalable Vector Graphics (SVG) 1.1</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">MDN: SVG: Scalable Vector Graphics</a></li>
+      </ol>
+    </section>
+    <section class="light">
+      <h2>Credits</h2>
+      <ul>
+        <li>SVG ZOO was created by <a href="http://nelilly.greententacles.com/">N.E. Lilly</a> to explore the amazing and wonderful complexity that can be found in Scalable Vector Graphics.</li>
+        <li><a href="https://thenounproject.com/georgiana.ionescu/collection/animals/">Animals</a> collection icons by created by <a href="https://thenounproject.com/georgiana.ionescu/">Georgiana Ionescu</a></li>
+      </ul>
+      <p></p>
+    </section>
+    <p class="copyright">&copy;2018 <a href="http://nelilly.greententacles.com/">N.E. Lilly</a> &mdash; zoo: &ldquo;a situation characterized by confusion and disorder.&rdquo;</p>
+  </footer>
+  <script>
+    const convertPath = (path, targetSize, originalSize) => path.split(/([\d\.]+)/).map(x => parseFloat(x) ? Math.floor(parseFloat(x) * targetSize / originalSize * 100) / 100 : x).join('');
+
+    //https://www.lynda.com/JavaScript-tutorials/Solution-Social-media-navbar/148137/158401-4.html
+    (function() {
+      console.log('do stuff');
+    })();
+    var ray = (function() {
+      return {
+        speak: function() {
+          console.log('do stuff');
+        }
+      }
+    })();
+  </script>
 </html>

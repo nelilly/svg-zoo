@@ -15,12 +15,7 @@
     <!-- <link href="style.css" rel="stylesheet"> -->
     <style>
       @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
-      *, *:after, *:before { box-sizing: inherit; }
       html { 
-        line-height: 1.15; /* 1 */
-        -ms-text-size-adjust: 100%; /* 2 */
-        -webkit-text-size-adjust: 100%; /* 2 */
-        -moz-box-sizing: border-box; box-sizing: border-box; -webkit-font-smoothing: antialiased;
         -webkit-font-smoothing: antialiased; 
         background: #f3f7f3; 
         box-sizing: border-box; 
@@ -38,16 +33,6 @@
         background-size: 100% 800px;
       }
 
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers (opinionated).
- */
-
-      body {
-        margin: 0;
-      }
       h1{
         margin: 0;
         padding: 0;
@@ -176,6 +161,7 @@
   <header class="light">
     <h1>SVG ZOO</h1>
     <p>an establishment that maintains a collection of wild SVGs for study, conservation, and display to the public.</p>
+    <nav><a href="#">&vellip;</a></nav>
   </header>
   <main role="main">
     <article>
@@ -190,17 +176,93 @@
         </article>
         <article data-id="animal">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 0 60 54">
-            <g><path fill="url(#hyena)" d="M41.308,14.098c0-0.601,0.486-1.088,1.087-1.088c0.6,0,1.088,0.488,1.088,1.088   c0,0.599-0.488,1.088-1.088,1.088C41.794,15.186,41.308,14.697,41.308,14.098 M16.382,13.695c-3.419,0.202-6.776,1.901-8.411,5.001   c-0.746,1.413-1.072,2.998-1.368,4.878c-0.184,1.174-0.371,2.357-0.675,3.353c-0.337,1.11-0.953,1.754-1.616,2.023   c-0.607,0.246-1.33,0.203-1.869-0.185c-0.392-0.282-0.659-0.739-0.67-1.325c-0.008-0.489-0.411-0.88-0.9-0.872   c-0.489,0.007-0.88,0.411-0.873,0.9c0.022,1.199,0.586,2.145,1.408,2.736c1.036,0.747,2.395,0.872,3.572,0.395   c1.116-0.454,2.13-1.465,2.644-3.156c0.135-0.444,0.248-0.908,0.346-1.383c0.248,1.929-0.089,3.106-0.439,4.33   c-0.308,1.083-0.629,2.204-0.629,3.844v7.278c0,0.342,0.258,0.619,0.603,0.619h3.897c0.341,0,0.618-0.257,0.618-0.603v-7.93   c0-2.009,1.706-3.284,3.305-4.478l0.966-0.739c0.522-0.416,1.104-0.669,1.708-0.765c0.634-0.1,1.305-0.033,1.971,0.191l6.126,2.053   c1.114,0.374,2.016,1.078,2.641,1.98c0.644,0.93,1.001,2.078,1.001,3.3v6.372c0,0.342,0.258,0.619,0.603,0.619h3.896   c0.342,0,0.619-0.257,0.619-0.603v-6.702c0-2.618,1.724-4.19,3.532-5.835l0.765-0.705c1.912-1.794,2.474-3.556,3.164-5.721   l0.31-0.96c0.249-0.751,1.399-0.711,2.005-0.532c0.851,0.253,1.621,0.613,2.519,0.325c0.423-0.137,0.813-0.395,1.06-0.748   l1.402-2.006c0.568-0.813,0.515-1.952-0.157-2.688l-3.43-3.762l-0.079-1.18c-0.026-0.376-0.154-0.723-0.363-1.01   c-0.208-0.285-0.499-0.512-0.85-0.651c-7.252-2.878-10.839-1.055-13.587,1.17c-1.073,0.868-2.123,1.929-3.254,2.692   C26.97,13.836,26,14.235,24.84,14.159l-7.013-0.461C17.362,13.668,16.876,13.666,16.382,13.695z"/></svg>
+            <g><path fill="url(#tiger)" d="M41.308,14.098c0-0.601,0.486-1.088,1.087-1.088c0.6,0,1.088,0.488,1.088,1.088   c0,0.599-0.488,1.088-1.088,1.088C41.794,15.186,41.308,14.697,41.308,14.098 M16.382,13.695c-3.419,0.202-6.776,1.901-8.411,5.001   c-0.746,1.413-1.072,2.998-1.368,4.878c-0.184,1.174-0.371,2.357-0.675,3.353c-0.337,1.11-0.953,1.754-1.616,2.023   c-0.607,0.246-1.33,0.203-1.869-0.185c-0.392-0.282-0.659-0.739-0.67-1.325c-0.008-0.489-0.411-0.88-0.9-0.872   c-0.489,0.007-0.88,0.411-0.873,0.9c0.022,1.199,0.586,2.145,1.408,2.736c1.036,0.747,2.395,0.872,3.572,0.395   c1.116-0.454,2.13-1.465,2.644-3.156c0.135-0.444,0.248-0.908,0.346-1.383c0.248,1.929-0.089,3.106-0.439,4.33   c-0.308,1.083-0.629,2.204-0.629,3.844v7.278c0,0.342,0.258,0.619,0.603,0.619h3.897c0.341,0,0.618-0.257,0.618-0.603v-7.93   c0-2.009,1.706-3.284,3.305-4.478l0.966-0.739c0.522-0.416,1.104-0.669,1.708-0.765c0.634-0.1,1.305-0.033,1.971,0.191l6.126,2.053   c1.114,0.374,2.016,1.078,2.641,1.98c0.644,0.93,1.001,2.078,1.001,3.3v6.372c0,0.342,0.258,0.619,0.603,0.619h3.896   c0.342,0,0.619-0.257,0.619-0.603v-6.702c0-2.618,1.724-4.19,3.532-5.835l0.765-0.705c1.912-1.794,2.474-3.556,3.164-5.721   l0.31-0.96c0.249-0.751,1.399-0.711,2.005-0.532c0.851,0.253,1.621,0.613,2.519,0.325c0.423-0.137,0.813-0.395,1.06-0.748   l1.402-2.006c0.568-0.813,0.515-1.952-0.157-2.688l-3.43-3.762l-0.079-1.18c-0.026-0.376-0.154-0.723-0.363-1.01   c-0.208-0.285-0.499-0.512-0.85-0.651c-7.252-2.878-10.839-1.055-13.587,1.17c-1.073,0.868-2.123,1.929-3.254,2.692   C26.97,13.836,26,14.235,24.84,14.159l-7.013-0.461C17.362,13.668,16.876,13.666,16.382,13.695z"/></svg>
         </article>
         <article data-id="animal">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 0 60 54">
-            <path fill="url(#elephant)" d="M39.79,12.539c0-0.602,0.487-1.09,1.089-1.09c0.602,0,1.09,0.488,1.09,1.09   c0,0.602-0.488,1.089-1.09,1.089C40.278,13.628,39.79,13.141,39.79,12.539 M6.031,11.504C4.274,13.211,2.962,15.4,2.287,17.85   c-0.645,2.345-0.728,3.843-0.757,6.239c-0.018,1.359-0.105,2.555-0.261,3.587c-0.23,1.518-0.604,2.65-1.116,3.401   c-0.275,0.403-0.171,0.954,0.232,1.23c0.403,0.275,0.954,0.171,1.23-0.232C2.17,31.26,2.59,30.167,2.87,28.79   c0.205,0.51,0.447,1.041,0.725,1.63c0.362,0.764,0.623,1.507,0.794,2.264c0.168,0.753,0.248,1.535,0.248,2.384v8.211   c0,0.366,0.299,0.614,0.654,0.598l5.712,0c0.329,0,0.598-0.268,0.598-0.598l0.002-6.701c0-1.284,0.365-3.474,1.295-5.153   c0.604-1.089,1.446-1.951,2.572-2.139c1.012-0.168,2.059-0.197,3.12-0.224c2.23-0.06,4.526-0.121,6.859-1.394   c0.305-0.166,0.493-0.034,0.638,0.232c0.182,0.332,0.335,0.816,0.496,1.318c0.151,0.476,0.309,0.971,0.509,1.418   c0.303,0.675,0.523,1.329,0.665,1.997c0.142,0.663,0.209,1.35,0.209,2.094v8.551c0,0.366,0.298,0.614,0.654,0.598l5.685,0   c0.354,0,0.6-0.286,0.6-0.626v-6.005c0-1.32,0.096-3.175,0.25-5.17c0.163-2.085,0.389-4.309,0.637-6.232   c0.12-0.932,0.791-1.151,1.642-1.08c0.875,0.074,1.509,0.036,2.066-0.013c0.405-0.037,0.813-0.085,1.218-0.087   c1.035-0.005,1.972,0.721,2.649,1.755c0.456,0.695,0.789,1.527,0.959,2.377c0.168,0.841,0.175,1.694-0.02,2.44   c-0.248,0.951-0.838,1.74-1.861,2.104c-0.274,0.096-0.433,0.372-0.393,0.65l0.268,2.807c0.037,0.389,0.36,0.565,0.713,0.536   c6.639-0.61,7.337-7.283,6.836-13.181c-0.177-2.093-0.511-4.096-0.77-5.659c-0.21-1.259-0.371-2.48-0.72-3.716   c-1.031-3.647-3.02-5.969-5.421-7.285c-2.392-1.309-5.177-1.603-7.816-1.207C34.5,6.382,33.857,6.522,33.23,6.7   c-3.214,0.906-5.889,1.289-8.542,1.387c-2.658,0.099-5.332-0.089-8.509-0.318l-0.964-0.036C11.651,7.733,8.427,9.173,6.031,11.504z   "/>
+            <path fill="url(#panda)" d="M39.79,12.539c0-0.602,0.487-1.09,1.089-1.09c0.602,0,1.09,0.488,1.09,1.09   c0,0.602-0.488,1.089-1.09,1.089C40.278,13.628,39.79,13.141,39.79,12.539 M6.031,11.504C4.274,13.211,2.962,15.4,2.287,17.85   c-0.645,2.345-0.728,3.843-0.757,6.239c-0.018,1.359-0.105,2.555-0.261,3.587c-0.23,1.518-0.604,2.65-1.116,3.401   c-0.275,0.403-0.171,0.954,0.232,1.23c0.403,0.275,0.954,0.171,1.23-0.232C2.17,31.26,2.59,30.167,2.87,28.79   c0.205,0.51,0.447,1.041,0.725,1.63c0.362,0.764,0.623,1.507,0.794,2.264c0.168,0.753,0.248,1.535,0.248,2.384v8.211   c0,0.366,0.299,0.614,0.654,0.598l5.712,0c0.329,0,0.598-0.268,0.598-0.598l0.002-6.701c0-1.284,0.365-3.474,1.295-5.153   c0.604-1.089,1.446-1.951,2.572-2.139c1.012-0.168,2.059-0.197,3.12-0.224c2.23-0.06,4.526-0.121,6.859-1.394   c0.305-0.166,0.493-0.034,0.638,0.232c0.182,0.332,0.335,0.816,0.496,1.318c0.151,0.476,0.309,0.971,0.509,1.418   c0.303,0.675,0.523,1.329,0.665,1.997c0.142,0.663,0.209,1.35,0.209,2.094v8.551c0,0.366,0.298,0.614,0.654,0.598l5.685,0   c0.354,0,0.6-0.286,0.6-0.626v-6.005c0-1.32,0.096-3.175,0.25-5.17c0.163-2.085,0.389-4.309,0.637-6.232   c0.12-0.932,0.791-1.151,1.642-1.08c0.875,0.074,1.509,0.036,2.066-0.013c0.405-0.037,0.813-0.085,1.218-0.087   c1.035-0.005,1.972,0.721,2.649,1.755c0.456,0.695,0.789,1.527,0.959,2.377c0.168,0.841,0.175,1.694-0.02,2.44   c-0.248,0.951-0.838,1.74-1.861,2.104c-0.274,0.096-0.433,0.372-0.393,0.65l0.268,2.807c0.037,0.389,0.36,0.565,0.713,0.536   c6.639-0.61,7.337-7.283,6.836-13.181c-0.177-2.093-0.511-4.096-0.77-5.659c-0.21-1.259-0.371-2.48-0.72-3.716   c-1.031-3.647-3.02-5.969-5.421-7.285c-2.392-1.309-5.177-1.603-7.816-1.207C34.5,6.382,33.857,6.522,33.23,6.7   c-3.214,0.906-5.889,1.289-8.542,1.387c-2.658,0.099-5.332-0.089-8.509-0.318l-0.964-0.036C11.651,7.733,8.427,9.173,6.031,11.504z   "/>
           </svg>
         </article>
+
+          <!-- <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <filter id="blurFilter">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4.5" />
+            </filter>
+            <circle cx="110" cy="110" r="100" style="filter: url(#blurFilter)" />
+          </svg> -->
+            <!-- <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+              <filter id="displacementFilter">
+                <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="3" result="turbulence"/>
+                <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+              <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)"/>
+            </svg> -->
+          <!-- <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <filter id="dropShadowFilter">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+              <feOffset dx="2" dy="4" />
+              <feMerge>
+                  <feMergeNode />
+                  <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <circle cx="110" cy="110" r="100" style="filter: url(#dropShadowFilter)" />
+          </svg> -->
+        <!-- <article data-id="svgfilter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 0 60 54">
+              <filter id="glowing">
+                <feColorMatrix type="matrix"
+                    values=
+                        "0 0 0 .8 0
+                         0 0 0 .3 0 
+                         0 0 0 0 0 
+                         0 0 0 .7 0"/>
+                <feGaussianBlur stdDeviation="1"
+                    result="coloredBlur"/>
+                <feOffset in="coloredBlur" dx="1" dy="1" result="offsetBlur"/>
+                <feMerge>
+                    <feMergeNode in="offsetBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="offsetFilter" width="180" height="180">
+                <feOffset in="SourceGraphic" dx="10" dy="10" />
+              </filter>
+              <filter id="floodFilter" filterUnits="userSpaceOnUse">
+                <feFlood flood-color="green" flood-opacity="0.5"/>
+              </filter>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+                <feComposite in="coloredBlur" in2="SourceGraphic" operator="out"/>
+              </filter>
+              <filter id="glowKnockout">
+                <feGaussianBlur stdDeviation="1" result="blur"/>
+                <feComposite in="blur" in2="SourceGraphic" operator="in"/>
+              </filter>
+              <filter id="dropShadowFilter">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="1" />
+                <feOffset dx="1" dy="2" />
+                <feMerge>
+                    <feMergeNode />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <filter id="spotlight">
+                <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
+                    flood-color="green" flood-opacity="0.5"/>
+                <feBlend in="SourceGraphic" in2="floodFill" mode="lighten"/>
+              </filter>
+              <filter id="innerGlow">
+                <feGaussianBlur stdDeviation="1" result="blur"/>
+                <feComposite in="blur" in2="SourceGraphic" operator="in"/>
+              </filter>
+              <g><path style="filter: url(#glowKnockout)" fill="url(#lion)" d="M41.308,14.098c0-0.601,0.486-1.088,1.087-1.088c0.6,0,1.088,0.488,1.088,1.088   c0,0.599-0.488,1.088-1.088,1.088C41.794,15.186,41.308,14.697,41.308,14.098 M16.382,13.695c-3.419,0.202-6.776,1.901-8.411,5.001   c-0.746,1.413-1.072,2.998-1.368,4.878c-0.184,1.174-0.371,2.357-0.675,3.353c-0.337,1.11-0.953,1.754-1.616,2.023   c-0.607,0.246-1.33,0.203-1.869-0.185c-0.392-0.282-0.659-0.739-0.67-1.325c-0.008-0.489-0.411-0.88-0.9-0.872   c-0.489,0.007-0.88,0.411-0.873,0.9c0.022,1.199,0.586,2.145,1.408,2.736c1.036,0.747,2.395,0.872,3.572,0.395   c1.116-0.454,2.13-1.465,2.644-3.156c0.135-0.444,0.248-0.908,0.346-1.383c0.248,1.929-0.089,3.106-0.439,4.33   c-0.308,1.083-0.629,2.204-0.629,3.844v7.278c0,0.342,0.258,0.619,0.603,0.619h3.897c0.341,0,0.618-0.257,0.618-0.603v-7.93   c0-2.009,1.706-3.284,3.305-4.478l0.966-0.739c0.522-0.416,1.104-0.669,1.708-0.765c0.634-0.1,1.305-0.033,1.971,0.191l6.126,2.053   c1.114,0.374,2.016,1.078,2.641,1.98c0.644,0.93,1.001,2.078,1.001,3.3v6.372c0,0.342,0.258,0.619,0.603,0.619h3.896   c0.342,0,0.619-0.257,0.619-0.603v-6.702c0-2.618,1.724-4.19,3.532-5.835l0.765-0.705c1.912-1.794,2.474-3.556,3.164-5.721   l0.31-0.96c0.249-0.751,1.399-0.711,2.005-0.532c0.851,0.253,1.621,0.613,2.519,0.325c0.423-0.137,0.813-0.395,1.06-0.748   l1.402-2.006c0.568-0.813,0.515-1.952-0.157-2.688l-3.43-3.762l-0.079-1.18c-0.026-0.376-0.154-0.723-0.363-1.01   c-0.208-0.285-0.499-0.512-0.85-0.651c-7.252-2.878-10.839-1.055-13.587,1.17c-1.073,0.868-2.123,1.929-3.254,2.692   C26.97,13.836,26,14.235,24.84,14.159l-7.013-0.461C17.362,13.668,16.876,13.666,16.382,13.695z"/></svg>
+              <p>feGaussianBlur + feComposite</p>
+          </article> -->
       </section>
 
       <section class="light">
-        <h2>Patterns<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/pattern"></a></h2>
+        <h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/pattern">Patterns</a></h2>
         <section class="patterns">
           <figure>
             <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -248,7 +310,7 @@
               <defs>
                 <pattern id="giraffe" patternTransform="skewY(15)" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
                   <path fill="#c60" d="M0,0v10h10,v-10z"/>
-                  <circle fill="none" stroke="#ce0" stroke-width="3" cx="5" cy="5" r="4"/>
+                  <circle fill="none" stroke="#c90" stroke-width="3" cx="5" cy="5" r="4"/>
                 </pattern>
               </defs>
               <circle cx="60" cy="60" r="60" fill="url(#giraffe)"/>
@@ -282,7 +344,7 @@
           <figure>
             <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="redfish" width="30" height="30" patternTransform="rotate(90 60 60)" patternUnits="userSpaceOnUse">
+                <pattern id="redfish" width="30" height="30" patternUnits="userSpaceOnUse">
                   <path fill="#c00" d="M0,0v30h30,v-30z"/>
                   <path fill="none" stroke="#900" stroke-width="7.5" stroke-linecap="square" d="M0,4q15,15 30,0"/>
                   <path fill="none" stroke="#900" stroke-width="7.5" stroke-linecap="square" d="M15,19q15,15 30,0"/>
@@ -296,7 +358,7 @@
           <figure>
             <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="bluefish" width="30" height="30" patternTransform="rotate(-90 60 60)" patternUnits="userSpaceOnUse">
+                <pattern id="bluefish" width="30" height="30" patternUnits="userSpaceOnUse">
                   <path fill="#09f" d="M0,0v30h30,v-30z"/>
                   <path fill="none" stroke="#009" stroke-width="7.5" stroke-linecap="square" d="M0,4q15,15 30,0"/>
                   <path fill="none" stroke="#009" stroke-width="7.5" stroke-linecap="square" d="M15,19q15,15 30,0"/>
@@ -310,7 +372,7 @@
           <figure>
             <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="goldfish" width="30" height="30" patternTransform="rotate(45 60 60)" patternUnits="userSpaceOnUse">
+                <pattern id="goldfish" width="30" height="30" patternUnits="userSpaceOnUse">
                   <path fill="#f90" d="M0,0v30h30,v-30z"/>
                   <path fill="none" stroke="#fc0" stroke-width="7.5" stroke-linecap="square" d="M0,4q15,15 30,0"/>
                   <path fill="none" stroke="#fc0" stroke-width="7.5" stroke-linecap="square" d="M15,19q15,15 30,0"/>
@@ -324,7 +386,7 @@
           <figure>
             <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="moonfish" width="30" height="30" patternTransform="rotate(-135 60 60)" patternUnits="userSpaceOnUse">
+                <pattern id="moonfish" width="30" height="30" patternUnits="userSpaceOnUse">
                   <path fill="#cdc" d="M0,0v30h30,v-30z"/>
                   <path fill="none" stroke="#efe" stroke-width="7.5" stroke-linecap="square" d="M0,4q15,15 30,0"/>
                   <path fill="none" stroke="#efe" stroke-width="7.5" stroke-linecap="square" d="M15,19q15,15 30,0"/>
@@ -334,192 +396,6 @@
               <circle cx="60" cy="60" r="60" fill="url(#moonfish)"/>
             </svg>
             <figure-caption>moonfish</figure-caption>
-          </figure>
-        </section>
-
-          <h2>Filter Patterns</h2>
-        <section class="patterns">
-          <figure>
-            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <filter id="hyenaPelt">
-                  <feFlood
-                      flood-color="rgb(188,207,148)"
-                      result="result21" />
-                  <feFlood
-                      flood-color="rgb(116,132,62)"
-                      result="result22" />
-                  <feFlood
-                      flood-color="rgb(98,100,63)"
-                      result="result23" />
-                  <feFlood
-                      result="result17"
-                      baseFrequency="0.53 0.30"
-                      flood-opacity="1"
-                      flood-color="rgb(143,155,102)" />
-                  <feTurbulence
-                      numOctaves="2.17"
-                      baseFrequency="0.07"
-                      result="result27" />
-                  <feTurbulence
-                      numOctaves="2.93"
-                      baseFrequency="0.04"
-                      result="result28" />
-                  <feTurbulence
-                      numOctaves="3"
-                      baseFrequency="0.053"
-                      result="result29" />
-                  <feColorMatrix
-                      numOctaves="2"
-                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -35 "
-                      result="result14"
-                      in="result27" />
-                  <feColorMatrix
-                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -28 "
-                      result="result15"
-                      in="result28" />
-                  <feColorMatrix
-                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -45 "
-                      result="result16"
-                      in="result29"
-                      baseFrequency="0.33" />
-                  <feTurbulence
-                      numOctaves="2"
-                      result="result12"
-                      baseFrequency="0.02"
-                      scale="9"
-                      type="fractalNoise" />
-                  <feTurbulence
-                      numOctaves="2.35"
-                      result="result13"
-                      baseFrequency="0.25"
-                      type="fractalNoise" />
-                  <feTurbulence
-                      result="result1"
-                      numOctaves="2"
-                      baseFrequency="0.022"
-                      type="fractalNoise" />
-                  <feComposite
-                      result="result19"
-                      in2="result14"
-                      in="result21"
-                      operator="in"
-                      scale="0.5"
-                      baseFrequency="0.25" />
-                  <feComposite
-                      in="result22"
-                      operator="in"
-                      in2="result15"
-                      result="result24" />
-                  <feComposite
-                      in2="result16"
-                      in="result23"
-                      operator="in"
-                      result="result25" />
-                  <feDisplacementMap
-                      in2="result12"
-                      result="result2"
-                      in="result19"
-                      scale="6.96"
-                      xChannelSelector="R"
-                      baseFrequency="0.38" />
-                  <feDisplacementMap
-                      in2="result13"
-                      result="result3"
-                      in="result24"
-                      scale="19.27"
-                      xChannelSelector="B" />
-                  <feDisplacementMap
-                      in2="result1"
-                      result="result4"
-                      in="result25"
-                      scale="17" />
-                  <feComposite
-                      result="result5"
-                      in="result2"
-                      in2="result3"
-                      operator="over" />
-                  <feComposite
-                      in2="result5"
-                      result="result6"
-                      in="result4" />
-                  <feComposite
-                      in2="result17"
-                      in="result6"
-                      result="result26" />
-                  <feTurbulence
-                      result="result8"
-                      baseFrequency="0.08"
-                      numOctaves="3" />
-                  <feTurbulence
-                      result="result11"
-                      baseFrequency="0.01"
-                      type="fractalNoise"
-                      numOctaves="5" />
-                  <feTurbulence
-                      result="result7"
-                      baseFrequency="0.07"
-                      numOctaves="5" />
-                  <feColorMatrix
-                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -30 "
-                      result="result30" />
-                  <feDisplacementMap
-                      in2="result8"
-                      result="result9"
-                      in="result26"
-                      scale="1.5"
-                      xChannelSelector="G" />
-                  <feDisplacementMap
-                      in2="result11"
-                      result="result10"
-                      baseFrequency="0.03"
-                      scale="10.80"
-                      xChannelSelector="R" />
-                  <feComposite
-                      in2="result30"
-                      result="result18"
-                      operator="in"
-                      baseFrequency="0.10" />
-                  <feComposite
-                      in2="result9"
-                      result="result20" />
-                  <feComposite
-                      in2="SourceGraphic"
-                      operator="in" />
-                </filter>
-                <pattern id="hyena" width="100%" height="100%" patternUnits="userSpaceOnUse">
-                  <rect style="filter:url(#hyenaPelt);" x="0" y="0" height="100%" width="100%"/>
-                </pattern>
-              </defs>
-              <circle cx="60" cy="60" r="60" fill="url(#hyena)"/>
-            </svg>
-            <figure-caption>hyena</figure-caption>
-          </figure>
-          <figure>
-            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="elephant" x="0" y="0" width="100%" height="100%">
-                    <defs>
-                        <filter id="a">
-                            <feTurbulence baseFrequency="0.15" numOctaves="8" result="noise" stitchTiles="stitch" type="fractalNoise"/>
-                            <feDiffuseLighting in="noise" lighting-color="#ccc" surfaceScale="5">
-                                <feDistantLight azimuth="45" elevation="60"/>
-                            </feDiffuseLighting>
-                        </filter>
-                        <filter id="b">
-                            <feTurbulence baseFrequency="0.5" numOctaves="24" result="noise" stitchTiles="stitch" type="fractalNoise"/>
-                            <feDiffuseLighting in="noise" lighting-color="#666" surfaceScale="9">
-                                <feDistantLight azimuth="105" elevation="120"/>
-                            </feDiffuseLighting>
-                        </filter>
-                    </defs>
-                    <rect width="100%" height="100%" filter="url(#a)" opacity="1"/>
-                    <rect width="100%" height="100%" filter="url(#b)" opacity=".5"/>
-                </pattern>
-              </defs>
-              <circle cx="60" cy="60" r="60" fill="url(#elephant)"/>
-            </svg>
-            <figure-caption>elephant</figure-caption>
           </figure>
           <figure>
             <svg width="120" height="120" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
@@ -581,10 +457,16 @@
                       result="result5"
                       in="result7"
                       scale="20.100000000000001">
-                      <feFuncR type="identity" />
-                      <feFuncG type="identity" />
-                      <feFuncB type="identity" />
-                      <feFuncA type="linear" slope="3.2200000000000002" intercept="-0.81000000000000005" />
+                      <feFuncR
+                        type="identity" />
+                      <feFuncG
+                        type="identity" />
+                      <feFuncB
+                        type="identity" />
+                      <feFuncA
+                        type="linear"
+                        slope="3.2200000000000002"
+                        intercept="-0.81000000000000005" />
                     </feComponentTransfer>
                     <feComposite
                       scale="59.799999999999997"
@@ -612,8 +494,386 @@
             </svg>
             <figure-caption>skybuffalo</figure-caption>
           </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="camo01">
+                  <feFlood
+                      id="feFlood4171"
+                      flood-color="rgb(188,207,148)"
+                      result="result21" />
+                  <feFlood
+                      id="feFlood4173"
+                      flood-color="rgb(116,132,62)"
+                      result="result22" />
+                  <feFlood
+                      id="feFlood4175"
+                      flood-color="rgb(98,100,63)"
+                      result="result23" />
+                  <feFlood
+                      id="feFlood4177"
+                      result="result17"
+                      baseFrequency="0.53900000000000003 0.307"
+                      flood-opacity="1"
+                      flood-color="rgb(143,155,102)" />
+                  <feTurbulence
+                      id="feTurbulence4179"
+                      numOctaves="2.179039301310044"
+                      baseFrequency="0.073834196891191708"
+                      result="result27" />
+                  <feTurbulence
+                      id="feTurbulence4181"
+                      numOctaves="2.9365671641791042"
+                      baseFrequency="0.040155440414507769"
+                      result="result28" />
+                  <feTurbulence
+                      id="feTurbulence4183"
+                      numOctaves="3"
+                      baseFrequency="0.053108808290155442"
+                      result="result29" />
+                  <feColorMatrix
+                      id="feColorMatrix4191"
+                      numOctaves="2"
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -35 "
+                      result="result14"
+                      in="result27" />
+                  <feColorMatrix
+                      id="feColorMatrix4193"
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -28 "
+                      result="result15"
+                      in="result28" />
+                  <feColorMatrix
+                      id="feColorMatrix4195"
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -45 "
+                      result="result16"
+                      in="result29"
+                      baseFrequency="0.33300000000000002" />
+                  <feTurbulence
+                      id="feTurbulence4197"
+                      numOctaves="2"
+                      result="result12"
+                      baseFrequency="0.027202072538860103"
+                      scale="9"
+                      type="fractalNoise" />
+                  <feTurbulence
+                      id="feTurbulence4199"
+                      numOctaves="2.3544776119402986"
+                      result="result13"
+                      baseFrequency="0.25518134715025909"
+                      type="fractalNoise" />
+                  <feTurbulence
+                      id="feTurbulence4201"
+                      result="result1"
+                      numOctaves="2"
+                      baseFrequency="0.022020725388601035"
+                      type="fractalNoise" />
+                  <feComposite
+                      id="feComposite4227"
+                      result="result19"
+                      in2="result14"
+                      in="result21"
+                      operator="in"
+                      scale="0.5"
+                      baseFrequency="0.255" />
+                  <feComposite
+                      id="feComposite4233"
+                      in="result22"
+                      operator="in"
+                      in2="result15"
+                      result="result24" />
+                  <feComposite
+                      id="feComposite4231"
+                      in2="result16"
+                      in="result23"
+                      operator="in"
+                      result="result25" />
+                  <feDisplacementMap
+                      id="feDisplacementMap4203"
+                      in2="result12"
+                      result="result2"
+                      in="result19"
+                      scale="6.9651741293532341"
+                      xChannelSelector="R"
+                      baseFrequency="0.38900000000000001" />
+                  <feDisplacementMap
+                      id="feDisplacementMap4205"
+                      in2="result13"
+                      result="result3"
+                      in="result24"
+                      scale="19.278606965174131"
+                      xChannelSelector="B" />
+                  <feDisplacementMap
+                      id="feDisplacementMap4207"
+                      in2="result1"
+                      result="result4"
+                      in="result25"
+                      scale="17" />
+                  <feComposite
+                      id="feComposite4209"
+                      result="result5"
+                      in="result2"
+                      in2="result3"
+                      operator="over" />
+                  <feComposite
+                      id="feComposite4211"
+                      in2="result5"
+                      result="result6"
+                      in="result4" />
+                  <feComposite
+                      id="feComposite4213"
+                      in2="result17"
+                      in="result6"
+                      result="result26" />
+                  <feTurbulence
+                      id="feTurbulence4215"
+                      result="result8"
+                      baseFrequency="0.07901554404145078"
+                      numOctaves="3" />
+                  <feTurbulence
+                      id="feTurbulence4217"
+                      result="result11"
+                      baseFrequency="0.011658031088082901"
+                      type="fractalNoise"
+                      numOctaves="5" />
+                  <feTurbulence
+                      id="feTurbulence4219"
+                      result="result7"
+                      baseFrequency="0.070000000000000007"
+                      numOctaves="5" />
+                  <feColorMatrix
+                      id="feColorMatrix4237"
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -30 "
+                      result="result30" />
+                  <feDisplacementMap
+                      id="feDisplacementMap4221"
+                      in2="result8"
+                      result="result9"
+                      in="result26"
+                      scale="1.5"
+                      xChannelSelector="G" />
+                  <feDisplacementMap
+                      id="feDisplacementMap4223"
+                      in2="result11"
+                      result="result10"
+                      baseFrequency="0.035999999999999997"
+                      scale="10.800000000000001"
+                      xChannelSelector="R" />
+                  <feComposite
+                      id="feComposite4225"
+                      in2="result30"
+                      result="result18"
+                      operator="in"
+                      baseFrequency="0.104" />
+                  <feComposite
+                      id="feComposite4229"
+                      in2="result9"
+                      result="result20" />
+                  <feComposite
+                      id="feComposite4235"
+                      in2="SourceGraphic"
+                      operator="in" />
+               </filter>
+                  <pattern id="hyena" patternTransform="translate(0) rotate(45 60 60)" width="100%" height="100%" patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" height="100%" width="100%"/>
+                  </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" style="filter:url(#camo01);"/>
+            </svg>
+            <figure-caption>hyena</figure-caption>
+          </figure>
+          <!-- <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="lionMane" x="0" y="0" width="100%" height="100%">
+                    <feTurbulence baseFrequency=".25,.01" numOctaves="1" seed="1"/>
+                    <feComponentTransfer result="grain">
+                      <feFuncR type="linear" slope="1"/>
+                    </feComponentTransfer>
+                    <feFlood flood-color="#c90"/>
+                    <feMerge>
+                      <feMergeNode/>
+                      <feMergeNode in="grain"/>
+                    </feMerge>
+                  </filter>
+                  <pattern id="lion" patternTransform="translate(0) rotate(45 60 60)" width="100%" height="100%" patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" height="100%" width="100%" style="filter: url(#lionMane)"/>
+                  </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#lion)"/>
+            </svg>
+            <figure-caption>lion</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="elephant" x="0" y="0" width="100%" height="100%">
+                    <defs>
+                        <filter id="a">
+                            <feTurbulence baseFrequency="0.15" numOctaves="8" result="noise" stitchTiles="stitch" type="fractalNoise"/>
+                            <feDiffuseLighting in="noise" lighting-color="#ccc" surfaceScale="5">
+                                <feDistantLight azimuth="45" elevation="60"/>
+                            </feDiffuseLighting>
+                        </filter>
+                        <filter id="b">
+                            <feTurbulence baseFrequency="0.5" numOctaves="24" result="noise" stitchTiles="stitch" type="fractalNoise"/>
+                            <feDiffuseLighting in="noise" lighting-color="#666" surfaceScale="9">
+                                <feDistantLight azimuth="105" elevation="120"/>
+                            </feDiffuseLighting>
+                        </filter>
+                    </defs>
+                    <rect width="100%" height="100%" filter="url(#a)" opacity="1"/>
+                    <rect width="100%" height="100%" filter="url(#b)" opacity=".5"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#elephant)"/>
+            </svg>
+            <figure-caption>elephant</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs> 
+                <filter id="mantisWing" x="0" y="0" width="100%" height="100%">
+                  <feTurbulence baseFrequency=".25,.01" numOctaves="3" seed="1"/>
+                  <feComponentTransfer result="grain">
+                    <feFuncR type="linear" slope="1"/>
+                  </feComponentTransfer>
+                  <feFlood flood-color="#0c0"/>
+                  <feMerge>
+                    <feMergeNode/>
+                    <feMergeNode in="grain"/>
+                  </feMerge>
+                </filter>
+                <pattern id="mantis" width="100%" height="100%">
+                  <rect x="0" y="0" height="100%" width="100%" style="filter: url(#mantisWing)"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#mantis)"/>
+            </svg>
+            <figure-caption>mantis</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="goldbug" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path fill="#ff3" d="M0,0v30h30,v-30z"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#goldbug)"/>
+            </svg>
+            <figure-caption>goldbug</figure-caption>
+          </figure>
+          <figure>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="scarab" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path fill="#990" d="M0,0v30h30,v-30z"/>
+                  <circle fill="#880" cx="15" cy="15" r="8"/>
+                </pattern>
+              </defs>
+              <circle cx="60" cy="60" r="60" fill="url(#scarab)"/>
+            </svg>
+            <figure-caption>scarab</figure-caption>
+          </figure> -->
         </section>
       </section>
+      <section class="light">
+
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" height="50%" width="50%" viewBox="-5 0 60 54">
+            <filter id="displacementFilter">
+              <feTurbulence type="turbulence" baseFrequency="0.5" numOctaves="3" result="turbulence"/>
+              <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+            </filter><path fill="url(#elephant)" style="filter: url(#displacementFilter)" d="M39.79,12.539c0-0.602,0.487-1.09,1.089-1.09c0.602,0,1.09,0.488,1.09,1.09   c0,0.602-0.488,1.089-1.09,1.089C40.278,13.628,39.79,13.141,39.79,12.539 M6.031,11.504C4.274,13.211,2.962,15.4,2.287,17.85   c-0.645,2.345-0.728,3.843-0.757,6.239c-0.018,1.359-0.105,2.555-0.261,3.587c-0.23,1.518-0.604,2.65-1.116,3.401   c-0.275,0.403-0.171,0.954,0.232,1.23c0.403,0.275,0.954,0.171,1.23-0.232C2.17,31.26,2.59,30.167,2.87,28.79   c0.205,0.51,0.447,1.041,0.725,1.63c0.362,0.764,0.623,1.507,0.794,2.264c0.168,0.753,0.248,1.535,0.248,2.384v8.211   c0,0.366,0.299,0.614,0.654,0.598l5.712,0c0.329,0,0.598-0.268,0.598-0.598l0.002-6.701c0-1.284,0.365-3.474,1.295-5.153   c0.604-1.089,1.446-1.951,2.572-2.139c1.012-0.168,2.059-0.197,3.12-0.224c2.23-0.06,4.526-0.121,6.859-1.394   c0.305-0.166,0.493-0.034,0.638,0.232c0.182,0.332,0.335,0.816,0.496,1.318c0.151,0.476,0.309,0.971,0.509,1.418   c0.303,0.675,0.523,1.329,0.665,1.997c0.142,0.663,0.209,1.35,0.209,2.094v8.551c0,0.366,0.298,0.614,0.654,0.598l5.685,0   c0.354,0,0.6-0.286,0.6-0.626v-6.005c0-1.32,0.096-3.175,0.25-5.17c0.163-2.085,0.389-4.309,0.637-6.232   c0.12-0.932,0.791-1.151,1.642-1.08c0.875,0.074,1.509,0.036,2.066-0.013c0.405-0.037,0.813-0.085,1.218-0.087   c1.035-0.005,1.972,0.721,2.649,1.755c0.456,0.695,0.789,1.527,0.959,2.377c0.168,0.841,0.175,1.694-0.02,2.44   c-0.248,0.951-0.838,1.74-1.861,2.104c-0.274,0.096-0.433,0.372-0.393,0.65l0.268,2.807c0.037,0.389,0.36,0.565,0.713,0.536   c6.639-0.61,7.337-7.283,6.836-13.181c-0.177-2.093-0.511-4.096-0.77-5.659c-0.21-1.259-0.371-2.48-0.72-3.716   c-1.031-3.647-3.02-5.969-5.421-7.285c-2.392-1.309-5.177-1.603-7.816-1.207C34.5,6.382,33.857,6.522,33.23,6.7   c-3.214,0.906-5.889,1.289-8.542,1.387c-2.658,0.099-5.332-0.089-8.509-0.318l-0.964-0.036C11.651,7.733,8.427,9.173,6.031,11.504z   "/>
+          </svg> -->
+        <h2>Filters</h2>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feOffset">feOffset</a></h3>
+        <p>"The &lt;feOffset&gt; SVG filter primitive allows to offset the input image. The input image as a whole is offset by the values specified in the dx and dy attributes."</p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTile">feTile</a></h3>
+        <p>"The &lt;feTile&gt; SVG filter primitive allows to fill a target rectangle with a repeated, tiled pattern of an input image. The effect is similar to the one of a &lt;pattern&gt;."</p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/">feGaussianBlur</a></h3>
+        <p>"The &lt;feGaussianBlur&gt; SVG filter primitive blurs the input image by the amount specified in stdDeviation, which defines the bell-curve."</p>
+        
+        <h2>Combining Filter Primitives</h2>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/">feBlend</a></h3>
+        <p>"The SVG filter primitive composes two objects together ruled by a certain blending mode. This is similar to what is known from image editing software when blending two layers. The mode is defined by the mode attribute."</p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComposite">feComposite</a></h3>
+        <p>"This filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: over, in, atop, out, xor and lighter."</p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feMerge">feMerge</a></h3>
+        <p>"The &lt;feMerge&gt; SVG element allows filter effects to be applied concurrently instead of sequentially. This is achieved by other filters storing their output via the result attribute and then accessing it in a &lt;feMergeNode&gt; child."</p>
+        <h4><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feMergeNode">feMergeNode</a></h4>
+        <p>"The &lt;feMergeNode&gt; takes the result of another filter to be processed by its parent &lt;feMerge&gt;"</feMerge></p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFlood">feFlood</a></h3>
+        <p>"The &lt;feFlood&gt; SVG filter primitive fills the filter subregion with the color and opacity defined by flood-color and flood-opacity."</p>
+
+        <h2>Color + Light Filters</h2>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix">feColorMatrix</a></h3>
+        <p>"The &lt;feColorMatrix&gt; SVG filter element changes colors based on a transformation matrix. Every pixel's color value (represented by an [R,G,B,A] vector) is matrix multiplied to create a new color."</p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feImage">feImage</a></h3>
+        <p>"The &lt;feImage&gt; SVG filter primitive fetches image data from an external source and provides the pixel data as output (meaning if the external source is an SVG image, it is rasterized.)"</p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feDiffuseLighting">feDiffuseLighting</a></h3>
+        <p>"The &lt;feDiffuseLighting&gt; SVG filter primitive lights an image using the alpha channel as a bump map. The resulting image, which is an RGBA opaque image, depends on the light color, light position and surface geometry of the input bump map."</p>
+        <h4>fePointLight</h4>
+        <h4>feDistantLight</h4>
+        <h4>feSpotLight</h4>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feSpecularLighting">feSpecularLighting</a></h3>
+        <p>"The &lt;feSpecularLighting&gt; SVG filter primitive lights a source graphic using the alpha channel as a bump map. The resulting image is an RGBA image based on the light color. The lighting calculation follows the standard specular component of the Phong lighting model."</p>
+
+        <h2>Displacement Filters</h2>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feDisplacementMap">feDisplacementMap</a></h3>
+        <p></p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTurbulence">feTurbulence</a></h3>
+        <p></p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feConvolveMatrix">feConvolveMatrix</a></h3>
+        <p></p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feMorphology">feMorphology</a></h3>
+        <p></p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComponentTransfer">feComponentTransfer</a></h3>
+        <p></p>
+
+
+        
+
+        <!-- Heather Paul https://www.flickr.com/photos/warriorwoman531/8129453141 -->
+        <!-- Bennilover https://www.flickr.com/photos/75885098@N05/35369829552 -->
+        <h2>Image Filters</h2>
+        <select>
+          <option>Macaw</option>
+          <option>Lion</option>
+          <option>Tiger</option>
+          <option>Bear</option>
+          <option>Monkey</option>
+          <option>Macaw</option>
+        </select>
+      </section>
+
+      <section class="light">
+        <h2>SVG Tutorials</h2>
+        <ol>
+          <li><a href="#">Hand-coding Artisinal SVGs</a></li>
+          <li><a href="#">About the viewBox</a></li>
+        </ol>
+      </section>
+    </article>
+
+
+    <svg viewBox="0 0 200 200" height="600" width="1200">
+        <filter id="treeDisplacement">
+          <feFlood x="0" y="0" width="100%" height="100%"
+              flood-color="#6c6" flood-opacity="1" result="floodFill"/>
+          <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="6" result="turbulence"/>
+          <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G" result="ttt"/>
+          <feBlend in="ttt" in2="floodFill" mode="screen" result="blended"/>
+          <feComposite in="blended" in2="ttt" operator="in" result="composite"/>
+          <feGaussianBlur in="composite" stdDeviation="0.2" />
+        </filter>
+        <g fill="url(#elephant)" style="filter: url(#treeDisplacement)">
+          <circle fill="url(#elephant)" cx="100" cy="40" r="30" />
+          <circle fill="#bbb" cx="90" cy="65" r="30" />
+          <circle fill="url(#elephant)" cx="110" cy="95" r="30" />
+          <circle fill="#999" cx="80" cy="105" r="30" />
+          <circle fill="#888" cx="95" cy="80" r="30" />
+          <path stroke="#fff" stroke-width="5" d="M100,200 100,20" ></path>
+        </g>
+      </svg>
   </main>
   <footer>
     <section class="light">

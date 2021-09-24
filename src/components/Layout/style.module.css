@@ -1,0 +1,12 @@
+.main {
+  display: inherit;
+}
+
+.siteHeader {
+  background-color: hsl(0, 80%, 33%);
+  background-image: linear-gradient(hsl(0, 80%, 20%), hsl(0, 80%, 30%) 20%, hsl(0, 80%, 33%) 33%);
+  border-bottom: .1rem solid #000;
+  border-top: .1rem solid #000;
+  padding: .5rem;
+  width: 100vw;
+}

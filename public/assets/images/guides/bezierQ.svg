@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2,-2 17,9" font-family="Arial, sans-serif" font-size=".4" style="background-color:#0D4963" stroke-width=".05">
+  <defs>
+    <style>
+      text, tspan, .origin, .point {fill: #fff; r: .1; text-anchor: middle}
+      .guide {stroke:#fff;stroke-width:.025}
+      .handle {opacity: .3}
+      .draw {fill:none; stroke:#fff}
+    </style>
+    <pattern id="grid" x="0" y="0" width="1" height="1" patternUnits="userSpaceOnUse">
+      <rect width="100%" height="100%" fill="none" stroke="#fff" opacity=".4" stroke-width=".025"/>
+    </pattern>
+  </defs>
+  <rect x="-2" y="-2" width="100%" height="100%" fill="url(#grid)"/>
+  <g class="guide"><path d="M-2,0h17zM0,-2v9"/></g>
+  <g class="origin">
+    <circle cx="0" cy="0" r=".1"/>
+    <text transform="translate(65.25 44.25)">0,0</text>
+    <text transform="translate(.5,-.5)"><tspan>x</tspan><tspan x=".5" y="0">→</tspan></text>
+    <text transform="translate(-.5,.5)"><tspan>y</tspan><tspan x="0" y=".5">↓</tspan></text>
+  </g>
+  <g class="drawing">
+    <text transform="translate(3,4.5)">3,4</text>
+    <text transform="translate(4,.66)">4,1</text>
+    <text transform="translate(5,4.5)">5,4</text>
+    <path class="draw handle" d="M3,4 4,1M4,1 5,4"/>
+    <circle class="point handle" cx="4" cy="1"/>
+    <circle class="point" cx="3" cy="4"/>
+    <circle class="point" cx="5" cy="4"/>
+    <path class="draw" d="M3,4Q4,1 5,4"/>
+  </g>
+</svg>

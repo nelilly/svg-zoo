@@ -1,0 +1,41 @@
+{
+  "name": "svg-zoo",
+  "homepage": "https://nelilly.github.io/svg-zoo",
+  "version": "1.0.0",
+  "description": "SVG ZOO: an establishment that maintains a collection of wild SVGs for study, conservation, and display to the public.",
+  "main": "index.jsx",
+  "scripts": {
+    "replaceFilePaths": "node replacer.js",
+    "dev": "next dev",
+    "build": "next build && next export -o build && touch build/.nojekyll && npm run replaceFilePaths",
+    "start": "next start",
+    "export": "next export -o build && touch build/.nojekyll && npm run replaceFilePaths",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelilly/svg-zoo.git"
+  },
+  "author": "Nathan E. Lilly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelilly/svg-zoo/issues"
+  },
+  "dependencies": {
+    "next": "^10.2.3",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^3.2.3",
+    "react-svg-loader": "^3.0.3"
+  }
+}

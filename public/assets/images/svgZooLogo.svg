@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="siteLogo" viewBox="0,0 100,100" height="100" width="100">
+  <defs>
+    <style>
+    .siteLogo {
+        animation: colorAnimation 30s infinite;
+        color: white;
+        fill: currentColor;
+      }
+
+      .logoBg {
+        animation: bgAnimation 30s infinite;
+      }
+
+      @keyframes colorAnimation {
+        0% { color: #fff; }
+        15% { color: #fff; }
+
+        25% { color: #dba341; }
+        40% { color: #dba341; }
+
+        50% { color: #34c7e1; }
+        65% { color: #34c7e1; }
+
+        75% { color: #49d154; }
+        90% { color: #49d154; }
+
+        99.999% { color: #fff; }
+        100% { color:  #fff; }
+      }
+
+      @keyframes bgAnimation {
+        0% { transform: translateX(0%); color: #234; }
+        15% { transform: translateX(0%); color: #234; }
+
+        25% { transform: translateX(-195%); color: #432; }
+        40% { transform: translateX(-195%); color: #432; }
+
+        50% { transform: translateX(-397.5%); color: #1f94a8; }
+        65% { transform: translateX(-397.5%); color: #1f94a8; }
+
+        75% { transform: translateX(-595%); color: #239e2c; }
+        90% { transform: translateX(-595%); color: #239e2c; }
+
+        99.999% { transform: translateX(-800%); color: #234; }
+        100% { transform: translateX(0%); color: #234; }
+      }
+
+    </style>
+    <mask id="lillyMask"><path fill="#fff" stroke="none" d="M50 95c26 0 21-48 47-48 0-11-19-21-32-4 0-18-1-26-15-38-14 12-15 20-15 38-13-17-32-7-32 4 26 0 21 48 47 48z"/></mask>
+    <mask id="circleMask"><circle fill="#fff" stroke="none" cx="50" cy="50" r="50" /></mask>
+    <radialGradient id="whiteGradient" cy="40%">
+      <stop offset="40%" stop-color="#0001"/>
+      <stop offset="100%" stop-color="#0004"/>
+    </radialGradient>
+    <symbol id="bg" viewBox="0,0 900,100" height="100" width="900">
+      <g style="stroke: currentColor; stroke-width: 10px; fill:none;">
+        <path d="m0,10 100,0
+        l30,5 30,-40 25,25 15,-15 15,-15 30,30 30,-30 30,30 30,-30 15,15 
+        q18.75,-18.75 37.5,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0
+        q15,15 30,10 q17.75,17.75 32.5,0 q15,15 30,0 q15,15 30,0
+          q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,15.125l125,0" />
+        <path d="m0,30 100,0
+        l30,10 30,-37.5 25,27.5 15,-15 15,-15 30,30 30,-30 30,30 30,-30 15,15 
+        q18.75,-18.75 37.5,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0
+        q15,15 30,12.5 q17.75,17.75 32.5,0 q15,15 30,0 q15,15 30,0
+          q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,2.5l125,0" />
+        <path d="m0,50 100,0
+        l30,15 30,-35 25,30 15,-15 15,-15 30,30 30,-30 30,30 30,-30 15,15 
+        q18.75,-18.75 37.5,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0
+        q15,15 30,15 q17.75,17.75 32.5,0 q15,15 30,0 q15,15 30,0
+          q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,11.125 35,10l130,0" />
+        <path d="m0,70 100,0
+        l30,20 30,-32.5 25,32.5 15,-15 15,-15 30,30 30,-30 30,30 30,-30 15,15 
+        q18.75,-18.75 37.5,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0
+        q15,15 30,17.5 q17.75,17.75 32.5,0 q15,15 30,0 q15,15 30,0
+          q15,15 30,0 q15,15 30,0 q15,15 30,-2.5l180,0" />
+        <path d="m0,90 100,0
+        l30,25 30,-30 25,35 15,-15 15,-15 30,30 30,-30 30,30 30,-30 15,15 
+        q18.75,-18.75 37.5,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0 q15,-15 30,0
+        q15,15 30,20
+        q17.75,17.75 32.5,0 q15,15 30,0 q15,15 30,0
+          q15,15 30,0 q15,15 30,0 q15,15 30,0l25,0" />
+        <path d="m505.75,13.125 q25,25 50,-2.5 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,-.5l40,0" />
+        <path d="m505.75,43.5 q25,25 50,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 28.5,6.5l137.5,0" />
+        <path d="m505.75,73.5 q25,25 50,2.5 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q15,15 30,0 q17.5,17.25 33.5,-6l70,0" />
+      </g>
+    </symbol>
+  </defs>
+  <g mask="url(#circleMask)">
+    <!-- <path fill="currentColor" stroke="none" d="M50 95c26 0 21-48 47-48 0-11-19-21-32-4 0-18-1-26-15-38-14 12-15 20-15 38-13-17-32-7-32 4 26 0 21 48 47 48z" /> -->
+    <path fill="currentColor" stroke="none" d="m0,0h100v100h-100z" />
+    <use class="logoBg" href="#bg" x="0" y="0" />
+    <path fill="url(#whiteGradient)" stroke="none" d="m0,0h100v100h-100z" />
+  </g>
+</svg>

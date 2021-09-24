@@ -1,0 +1,187 @@
+.jumbotron {
+  background-color: #f5f1d9;
+  background-image: linear-gradient(-135deg, #d6c6a8 0%, #f5f1d9 60%, #d6c6a8 100%);
+  background-image: linear-gradient(-135deg, #925bff 0%, #a187d4 60%, #925bff 100%);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  /* height: 30rem; */
+  overflow: hidden;
+  padding: 6rem 3rem 3rem;
+}
+
+.jumbotronTabs {
+  display: none;
+}
+
+.jumbotronPanel {
+  display: block;
+  min-height: 400px;
+}
+
+.jumbotronMenu {
+  display: inline-block;
+  position: relative;
+}
+
+
+
+.cta {
+  color: #c00;
+  outline: .2rem solid rgba(255,255,255,0);
+}
+
+.cta:hover,
+.cta:focus {
+  color: #900;
+  text-decoration: underline;
+}
+
+.featuredImage > img {
+  border-radius: .5rem;
+}
+
+@media (min-width: 640px) {
+  .jumbotron {
+    height: 33rem;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100vw;
+  }
+
+  .jumbotronTabs {
+    bottom: 0;
+    display: flex;
+    /* height: 6rem; */
+    /* justify-content: space-around; */
+    padding: 3rem 3rem 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .jumbotronTab {
+    /* background-color: transparent; */
+    background-color: #673ab7;
+    border: none;
+    border-radius: .2rem;
+    /* border-bottom: 0 solid rgba(0,0,0,0); */
+    /* border-top: .5rem solid rgba(0,0,0,0); */
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: unset;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem .5rem 1rem;
+    text-transform: none;
+    transform: translateY(.45rem) scale(.85);
+    transition: .3s transform ease-out, .3s border ease-out;
+    width: 16.666%;
+  }
+
+  .jumbotronTab:hover,
+  .jumbotronTab:focus,
+  .jumbotronTab.selected {
+    transform: translateY(.35rem) scale(.9);
+    background-color: #673ab7;
+  }
+
+  .jumbotronTab.selected:hover,
+  .jumbotronTab.selected:focus {
+    transform: translateY(0rem) scale(1);
+  }
+
+  .jumbotronPanel {
+    /* display: none; */
+    outline: none;
+    position: absolute;
+    transition: .5s transform ease-in-out;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .jumbotronPanel:focus-within {
+    transform: scale(1.025);
+  }
+
+  .jumbotronPanel.selected {
+    display: block;
+    z-index: 10;
+  }
+
+  .container {
+    padding: 10rem 3rem 3rem;
+    transition: transform 1s;
+    will-change: contents;
+    /* transform: perspective(30rem) rotateZ(5deg) rotateY(15deg); */
+  }
+  
+  .card {
+    color: #000;
+    background-color: #fff;
+    border-radius: .25rem;
+    padding: 1rem;
+    box-shadow: 0 1rem 1rem #0003;
+    transform: perspective(30rem) rotateZ(5deg) rotateY(95deg) translateX(-100rem);
+    transition: transform 1s ease-in-out;
+    width: 40%;
+    will-change: contents;
+    /* padding-right: 44.444%; */
+  }
+
+  .cardTitle {
+    font-size: 2.625rem;
+    font-weight: 400;
+    line-height: 1.33;
+    margin: 0 0 1rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #f3c474;
+    color: #925bff;
+    color: #e13496;
+  }
+
+  .featuredImage {
+    /* animation: zoom-out 2s ease-in-out forwards;
+    animation-delay: 300ms; */
+    height: 10rem;
+    right: 5rem;
+    position: absolute;
+    top: 4rem;
+    transform: perspective(60rem) rotateX(-85deg) rotateY(14deg) rotateZ(-15deg) translateZ(-50rem);
+    transition: transform 1s ease-in-out;
+    width: 17.6rem;
+    z-index: -1;
+  }
+
+  .selected .card {
+    transform: perspective(30rem) rotateX(4deg) rotateY(4deg) rotateZ(5deg) translateY(0);
+  }
+
+  .selected .featuredImage {
+    transform: perspective(30rem) rotateX(-4deg) rotateY(-4deg) rotateZ(-2deg) translateY(0);
+  }
+
+  /* .featuredImage:before {
+    content: '';
+    display: block;
+    background-image: linear-gradient(to bottom, #0002, #0006);
+    position: absolute;
+    z-index: 2;
+    height: 30rem;
+    width: 100%;
+  } */
+}
+
+/* @keyframes zoom-out {
+  from {
+    transform: scale(1.1) rotate(1deg);
+  }
+
+  to {
+    transform: scale(1);
+  }
+} */

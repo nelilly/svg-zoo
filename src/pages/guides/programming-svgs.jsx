@@ -55,7 +55,7 @@ const ProgrammingPage = ({lastUpdated}) => {
             
             <p>Scripting and font imports don't work when the SVG is displayed using an &lt;img&gt; element.</p>
             <pre><code>&lt;img src="component.svg" width="100%" height="200" /&gt;</code></pre>
-            <img src="/assets/images/guides/component.svg" width="200" height="200" />
+            <img src={`${process.env.pathPrefix}/assets/images/guides/component.svg`} width="200" height="200" />
           </section>
           <section id="switch">
             <h2>&lt;switch&gt;</h2>
@@ -113,7 +113,7 @@ const ProgrammingPage = ({lastUpdated}) => {
                   <circle className="loading-dot" cx="50" cy="50" r="8.9"/>
                   <circle className="loading-dot" cx="77.4" cy="50" r="8.9"/>
                 </g>
-                <image href="/assets/images/guides/loading-dots-svg-backup.gif" x="0" y="0" height="100px" width="100px"></image>
+                <image href={`${process.env.pathPrefix}/assets/images/guides/loading-dots-svg-backup.gif`} x="0" y="0" height="100px" width="100px"></image>
               </switch>
             </svg>
 
@@ -122,7 +122,7 @@ const ProgrammingPage = ({lastUpdated}) => {
               <circle cx="50" cy="50" r="46" fill="rgba(0, 0, 0, 0.87)"/>
               <switch>
                 <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-static">
-                  <image href="/assets/images/guides/loading-dots-svg-backup.gif" x="0" y="0" height="100px" width="100px"></image>
+                  <image href={`${process.env.pathPrefix}/assets/images/guides/loading-dots-svg-backup.gif`} x="0" y="0" height="100px" width="100px"></image>
                 </g>
               </switch>
             </svg>

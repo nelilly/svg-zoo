@@ -159,7 +159,7 @@ const DataUriPage = ({lastUpdated}) => {
           <section>
             <h2>Resources</h2>
             <ul>
-              <li><a href="/guides/understanding-svgs#data_uri">Understanding SVGs: CSS Background with data URI</a></li>
+              <li><a href={`${process.env.pathPrefix}/guides/understanding-svgs#data_uri`}>Understanding SVGs: CSS Background with data URI</a></li>
             </ul>
           </section>
         </article>

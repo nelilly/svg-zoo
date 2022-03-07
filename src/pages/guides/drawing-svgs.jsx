@@ -30,7 +30,7 @@ const DrawingPage = ({lastUpdated}) => {
       <Layout lastUpdated={lastUpdated}>
         <article>
           <Hero title="Drawing SVGs" image="/assets/images/drawing_lion.svg" description={description} />
-          <p>Once you have a firm grasp of <Link href="/guides/understanding-svgs/">Understanding SVGs</Link>...</p>
+          <p>Once you have a firm grasp of <Link href={`${process.env.pathPrefix}/guides/understanding-svgs/`}>Understanding SVGs</Link>...</p>
           <section id="toc">
             <h2>Table of Contents</h2>
             <ul>
@@ -122,7 +122,7 @@ const DrawingPage = ({lastUpdated}) => {
               <h3>Coordinate System</h3>
               <p>Simple cartesian coordinates.</p>
               <figure>
-                <img src="/assets/images/guides/cartesian.svg" alt="Cartesian Coordinates" />
+                <img src={`${process.env.pathPrefix}/assets/images/guides/cartesian.svg`} alt="Cartesian Coordinates" />
               </figure>
               <aside>
                 <p>Khan Academy</p>
@@ -139,19 +139,19 @@ const DrawingPage = ({lastUpdated}) => {
               <pre><code>{`<svg viewBox="0 0 10 6">`}</code></pre>
               <pre><code>{`<svg viewBox="0,0 10,6">`}</code></pre>
               <figure>
-                <img src="/assets/images/guides/viewBox.svg" alt="" />
+                <img src={`${process.env.pathPrefix}/assets/images/guides/viewBox.svg`} alt="" />
                 <figcaption>A viewBox set to origin <code>0,0</code> with a width of <code>10</code> and a height of <code>6</code>.</figcaption>
               </figure>
               
               <p>You can think of the viewBox as an analog to the <em>artboard</em> that can be found in Adobe Illustrator or other vector-based drawing applications. When Illustrator exports SVG files the artboard defines the viewBox. </p>
 
               <figure>
-                <img src="/assets/images/guides/artboard.webp" alt="" />
+                <img src={`${process.env.pathPrefix}/assets/images/guides/artboard.webp`} alt="" />
                 <figcaption>The Artboard in Adobe Illustrator</figcaption>
               </figure>
 
               <aside>
-                <p>Check out the <Link href="/tools/viewbox-visualizer">Viewbox Visualizer</Link> for an interactive example of the <code>viewBox</code> functionality.</p>
+                <p>Check out the <Link href={`${process.env.pathPrefix}/tools/viewbox-visualizer`}>Viewbox Visualizer</Link> for an interactive example of the <code>viewBox</code> functionality.</p>
               </aside>
 
               {/* <h4>viewBox (cropped)</h4>
@@ -165,7 +165,7 @@ const DrawingPage = ({lastUpdated}) => {
                   <polygon points="360,20 400,80 320,80"/>
                   <polygon points="445,15 475,30 475,60 445,75 415,60 415,30"/>
                   <text x="500" y="75">I &#10084; SVG!</text>
-                  <image href="/assets/images/guides/lion_cracker.webp" x="750" y="5" height="100" width="100" />
+                  <image href={`${process.env.pathPrefix}/assets/images/guides/lion_cracker.webp`} x="750" y="5" height="100" width="100" />
                 </svg>
               </figure>
               <p>Using the SVG above, we can change the viewBox so that only portions of the SVG are displayed.</p>
@@ -178,7 +178,7 @@ const DrawingPage = ({lastUpdated}) => {
                   <polygon points="360,20 400,80 320,80"/>
                   <polygon points="445,15 475,30 475,60 445,75 415,60 415,30"/>
                   <text x="500" y="75">I &#10084; SVG!</text>
-                  <image href="/assets/images/guides/lion_cracker.webp" x="750" y="5" height="100" width="100" />
+                  <image href={`${process.env.pathPrefix}/assets/images/guides/lion_cracker.webp`} x="750" y="5" height="100" width="100" />
                 </svg>
               </figure>
 
@@ -191,7 +191,7 @@ const DrawingPage = ({lastUpdated}) => {
                   <polygon points="360,20 400,80 320,80"/>
                   <polygon points="445,15 475,30 475,60 445,75 415,60 415,30"/>
                   <text x="500" y="75">I &#10084; SVG!</text>
-                  <image href="/assets/images/guides/lion_cracker.webp" x="750" y="5" height="100" width="100" />
+                  <image href={`${process.env.pathPrefix}/assets/images/guides/lion_cracker.webp`} x="750" y="5" height="100" width="100" />
                 </svg>
               </figure>
 
@@ -204,7 +204,7 @@ const DrawingPage = ({lastUpdated}) => {
                   <polygon points="360,20 400,80 320,80"/>
                   <polygon points="445,15 475,30 475,60 445,75 415,60 415,30"/>
                   <text x="500" y="75">I &#10084; SVG!</text>
-                  <image href="/assets/images/guides/lion_cracker.webp" x="750" y="5" height="100" width="100" />
+                  <image href={`${process.env.pathPrefix}/assets/images/guides/lion_cracker.webp`} x="750" y="5" height="100" width="100" />
                 </svg>
               </figure> */}
             </section>
@@ -575,7 +575,7 @@ const DrawingPage = ({lastUpdated}) => {
                 </svg>
               </figure> */}
               <aside>
-                <p>Visit the <Link href="/tools/arc-path-visualizer">Arc Path Visualizer</Link> to get a better understanding of how the Arc path commands work.</p>
+                <p>Visit the <Link href={`${process.env.pathPrefix}/tools/arc-path-visualizer/`}>Arc Path Visualizer</Link> to get a better understanding of how the Arc path commands work.</p>
               </aside>
             </section>
 
@@ -587,7 +587,7 @@ const DrawingPage = ({lastUpdated}) => {
                 <li>Mirror Handle (Cubic <b>S</b>)</li>
               </ul>
               <pre><code>{`<path d="M3,4 C1,1 7,1 5,4" />`}</code></pre>
-              <figure><img src="/assets/images/guides/bezierC.svg" /></figure>
+              <figure><img src={`${process.env.pathPrefix}/assets/images/guides/bezierC.svg`} /></figure>
 
               <pre><code>{`<path d="M10,60 C-10,90 110,90 90,60" />`}</code></pre>
               <style>{`
@@ -627,7 +627,7 @@ const DrawingPage = ({lastUpdated}) => {
                 <li>Mirror Handle (Quadratic <b>T</b>)</li>
               </ul>
               <pre><code>{`<path d="M3,4 Q4,1 5,4" />`}</code></pre>
-              <figure><img src="/assets/images/guides/bezierQ.svg" /></figure>
+              <figure><img src={`${process.env.pathPrefix}/assets/images/guides/bezierQ.svg`} /></figure>
               <pre><code>{`<path d="M5,80 Q50,5 95,80" />`}</code></pre>
               <figure>
                 <svg width="200" height="200" viewBox="0 0 100 100">
@@ -780,7 +780,7 @@ const DrawingPage = ({lastUpdated}) => {
               <pre><code>{`<image href="lion_cracker.webp" x="10" y="10" width="80" height="80" />`}</code></pre>
               <figure>
                 <svg width="200" height="200" viewBox="0 0 100 100">
-                  <image href="/assets/images/guides/lion_cracker.webp" x="10" y="10" width="80" height="80" />
+                  <image href={`${process.env.pathPrefix}/assets/images/guides/lion_cracker.webp`} x="10" y="10" width="80" height="80" />
                 </svg>
               </figure>
 

@@ -1,6 +1,5 @@
-const webpack = require('webpack');
-const isProd = (process.env.NODE_ENV || 'production') === 'production';
-const assetPrefix = isProd ? '/svg-zoo/' : '';
+// const webpack = require('webpack');
+const pathPrefix = process.env.NODE_ENV === 'production' ? '/svg-zoo' : '';
 
 module.exports = {
   cssModules: true,
@@ -9,17 +8,18 @@ module.exports = {
     localIdentName: '[local]___[hash:base64:5]',
     url: false,
   },
+  assetPrefix: pathPrefix,
   env: {
     PUBLIC_URL: "https://nelilly.github.io/svg-zoo",
-    assetPrefix: './'
+    pathPrefix,
   },
   webpack: (config) => {
-    config.plugins.push(
-      new webpack.DefinePlugin({
-        'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix),
-      }),
-    );
-    config.resolve.modules.push(__dirname);
+    // config.plugins.push(
+    //   new webpack.DefinePlugin({
+    //     'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix),
+    //   }),
+    // );
+    // config.resolve.modules.push(__dirname);
     config.module.rules.push({
       test: /\.svg$/,
       use: [

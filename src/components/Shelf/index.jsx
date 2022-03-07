@@ -17,7 +17,7 @@ const Shelf = ({books, color = 'var(--color-canvas-text)', canvas, title}) => {
       <div className={bookList}>
         {books.map(({title, cover}) => (
           <figure key={`shelf_${keyChange(title)}}`} className={book}>
-            <img src={cover} alt="" />
+            <img src={`${process.env.pathPrefix}${cover}`} alt="" />
             <figcaption>{title}</figcaption>
           </figure>)
         )}

@@ -58,7 +58,7 @@ const HomePage = ({lastUpdated}) => {
             <h2>SVG Tutorials</h2>
             <p>A series of tutorials, examples, and exercises exploring the different features and uses of SVG images.</p>
             <ul>
-              <li><Link href="/tutorials/hand-coded-icons/">Hand-coded Icons</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/tutorials/hand-coded-icons/`}>Hand-coded Icons</Link></li>
             </ul>
           </section>
 
@@ -66,9 +66,9 @@ const HomePage = ({lastUpdated}) => {
             <h2>SVG Libraries</h2>
             <p>SVG libraries for gradients, patterns, and filters.</p>
             <ul>
-              <li><Link href="/libraries/gradients/">Gradients</Link></li>
-              <li><Link href="/libraries/patterns/">Patterns</Link></li>
-              <li><Link href="/libraries/filters/">Filters</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/libraries/gradients/`}>Gradients</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/libraries/patterns/`}>Patterns</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/libraries/filters/`}>Filters</Link></li>
             </ul>
           </section>
 
@@ -76,9 +76,9 @@ const HomePage = ({lastUpdated}) => {
             <h2>SVG Tools</h2>
             <p>SVG tools, generators, helpers, and visualizations.</p>
             <ul>
-              <li><Link href="/tools/arc-path-visualizer/">Arc Path Visualizer</Link></li>
-              <li><Link href="/tools/viewbox-visualizer/">ViewBox Visualizer</Link></li>
-              <li><Link href="/tools/svg-to-data-uri-converter/">SVG to Data URI Converter</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/tools/arc-path-visualizer/`}>Arc Path Visualizer</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/tools/viewbox-visualizer/`}>ViewBox Visualizer</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/tools/svg-to-data-uri-converter/`}>SVG to Data URI Converter</Link></li>
               {/* <li>feColorMatrix Visualizer</li> */}
               {/* <li>feConvolveMatrix Visualizer</li> */}
               {/* <li>feTurbulence Visualizer</li> */}

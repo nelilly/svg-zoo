@@ -1,6 +1,6 @@
 const replace = require("replace-in-file");
 const options = {
-  files: ['./build/*.html', './build/**/*.html', './build/browserconfig.xml', './build/site.webmanifest' ],
+  files: ['./build/browserconfig.xml', './build/site.webmanifest' ],
   from: [/src="\//g, /href="\//g, /url\(\//g, /src": "\//g],
   to: ['src="/svg-zoo/', 'href="/svg-zoo/', 'url(/svg-zoo/', 'src": "/svg-zoo/'],
 };

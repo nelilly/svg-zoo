@@ -37,7 +37,7 @@ const TutorialsPage = ({lastUpdated}) => {
             <ul>
               <li>Drawing
                 <ul>
-                  <li><Link href="/tutorials/hand-coded-icons">Hand-coded Icons</Link></li>
+                  <li><Link href={`${process.env.pathPrefix}/tutorials/hand-coded-icons/`}>Hand-coded Icons</Link></li>
                 </ul>
               </li>
             </ul>

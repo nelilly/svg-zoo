@@ -35,9 +35,9 @@ const ToolsPage = ({lastUpdated}) => {
           <Hero title="SVG Tools" description={description} />
           <section>
             <ul>
-              <li><Link href="/tools/arc-path-visualizer/">Arc Path Visualizer</Link></li>
-              <li><Link href="/tools/viewbox-visualizer/">ViewBox Visualizer</Link></li>
-              <li><Link href="/tools/svg-to-data-uri-converter/">SVG to Data URI Converter</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/tools/arc-path-visualizer/`}>Arc Path Visualizer</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/tools/viewbox-visualizer/`}>ViewBox Visualizer</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/tools/svg-to-data-uri-converter/`}>SVG to Data URI Converter</Link></li>
             </ul>
           </section>
           <section id="to_do">

@@ -6,7 +6,7 @@ import {
 } from './style.module.css';
 
 const Hero = ({title, image, description}) => {
-  const imageUrl = image && `url(${image})`;
+  const imageUrl = image && `url(${process.env.pathPrefix}${image})`;
 
   return (
     <header className={hero} style={{backgroundImage: `${imageUrl}`}}>

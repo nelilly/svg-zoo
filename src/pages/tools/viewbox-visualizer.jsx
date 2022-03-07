@@ -191,7 +191,7 @@ const ViewboxVisualizerPage = ({lastUpdated}) => {
           <section>
             <h2>Resources</h2>
             <ul>
-              <li><Link href="/guides/drawing-svgs#viewbox">Drawing SVGs: The viewBox</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/guides/drawing-svgs#viewbox`}>Drawing SVGs: The viewBox</Link></li>
             </ul>
           </section>
         </article>

@@ -16,7 +16,7 @@ import {
 const Next = ({ image, title, description, cta }) => {
   return <aside className={`${next}`} >
     <div className={featuredImage}>
-      <img src={`${image}`} alt="" preload="true" layout="fill" objectfit="cover" objectposition="center" />
+      <img src={`${process.env.pathPrefix}${image}`} alt="" preload="true" layout="fill" objectfit="cover" objectposition="center" />
     </div>
     <div className={container}>
       <div className={card}>

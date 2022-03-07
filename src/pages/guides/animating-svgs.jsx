@@ -66,7 +66,7 @@ const AnimatingPage = ({lastUpdated}) => {
             </svg>
 
             <h3>Circle Loading</h3>
-            <img src="/assets/images/guides/loading-circle.svg" height="200" width="200" />
+            <img src={`${process.env.pathPrefix}/assets/images/guides/loading-circle.svg`} height="200" width="200" />
           </section>
 
           <section id="smil">

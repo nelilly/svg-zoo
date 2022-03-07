@@ -55,7 +55,7 @@ const UnderstandingPage = ({lastUpdated}) => {
           </section>
           <section id="svg">
             <h2>What is an SVG?</h2>
-            <img src="/assets/images/svg-logo.svg" alt="Scalable Vector Graphics" />
+            <img src={`${process.env.pathPrefix}/assets/images/svg-logo.svg`} alt="Scalable Vector Graphics" />
             <p>SVG stands for Scalable Vector Graphics. An SVG is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The <a href="https://www.w3.org/TR/SVG11/">SVG specification</a> is an open standard developed by the World Wide Web Consortium (W3C) since 1999.</p> 
             
             <p>Like HTML pages, SVG images and their behaviors are defined using elements. Learning to code in SVG is almost as easy as learning to code in HTML.</p>
@@ -80,9 +80,9 @@ const UnderstandingPage = ({lastUpdated}) => {
                   <circle cx="170" cy="70" r="20" />
                 </clipPath>
                 </defs>
-                <image href="/assets/images/guides/circle_raster.png" height="100%" width="50%" />
+                <image href={`${process.env.pathPrefix}/assets/images/guides/circle_raster.png`} height="100%" width="50%" />
                 <g clipPath="url(#rasterClip)">
-                  <image href="/assets/images/guides/circle_raster.png" height="100%" width="50%" transform="translate(-220,-220) scale(4)" style={{imageRendering: 'pixelated'}} />
+                  <image href={`${process.env.pathPrefix}/assets/images/guides/circle_raster.png`} height="100%" width="50%" transform="translate(-220,-220) scale(4)" style={{imageRendering: 'pixelated'}} />
                   <circle cx="70" cy="70" r="20" fill="none" stroke="#000" strokeWidth="1" />
                 </g>
                 <circle cx="150" cy="50" r="33" />
@@ -119,7 +119,7 @@ const UnderstandingPage = ({lastUpdated}) => {
             <h2>SVG Browser Support</h2>
             <p>Basic support for SVGs is available in all major browsers.</p>
             <figure>
-              <img src="/assets/images/guides/caniuse_basic_support.webp" alt="Can I Use? SVG Browser Support Matrix" />
+              <img src={`${process.env.pathPrefix}/assets/images/guides/caniuse_basic_support.webp`} alt="Can I Use? SVG Browser Support Matrix" />
               <figcaption>SVG browser support statistics as of February 1, 2022</figcaption>
             </figure>
             <p>Visit <a href="http://caniuse.com/#search=svg">Can I Use? SVGs</a> for a full list of SVG features and their availability in different browsers.</p>
@@ -225,7 +225,7 @@ const UnderstandingPage = ({lastUpdated}) => {
       background-repeat: no-repeat;
     }
   </style>`}</code></pre>
-              <p>Use the <Link href="/tools/svg-to-data-uri-converter/">SVG to Data URI Converter</Link> to get an encoded data uri.</p>
+              <p>Use the <Link href={`${process.env.pathPrefix}/tools/svg-to-data-uri-converter/`}>SVG to Data URI Converter</Link> to get an encoded data uri.</p>
             </section>
           </section>
           <Next 

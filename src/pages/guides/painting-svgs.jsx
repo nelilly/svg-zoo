@@ -114,7 +114,7 @@ const PaintingPage = ({lastUpdated}) => {
             <path fill="white" d="M0,0L10,5L0,10" />
           </pattern>
           <mask id="lionMask" maskUnits="userSpaceOnUse" >
-            <image href="/assets/images/guides/lion_cracker.webp" x="55" y="15" width="200" height="200" viewBox="0 0 100 100" />
+            <image href="${process.env.pathPrefix}/assets/images/guides/lion_cracker.webp" x="55" y="15" width="200" height="200" viewBox="0 0 100 100" />
           </mask>
             <circle id="lionContainer" class="go" cx="75" cy="50" r="25" />
           <marker id="Triangle2" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto" stroke="none" fill="black" stroke-width="0">
@@ -146,7 +146,7 @@ const PaintingPage = ({lastUpdated}) => {
                     <path d="M0,0L10,5L0,10" />
                   </pattern>
                   <mask id="lionMask" maskUnits="userSpaceOnUse" >
-                    <image href="/assets/images/guides/lion_cracker.webp" x="55" y="15" width="100" height="100" viewBox="0 0 100 100" />
+                    <image href={`${process.env.pathPrefix}/assets/images/guides/lion_cracker.webp`} x="55" y="15" width="100" height="100" viewBox="0 0 100 100" />
                   </mask>
                   <circle id="lionContainer" className="go" cx="75" cy="50" r="25" />
                   <marker id="Triangle2" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto" stroke="none" fill="white" strokeWidth="0">
@@ -164,7 +164,7 @@ const PaintingPage = ({lastUpdated}) => {
                 <rect x="100" y="25" width="50" height="50" fill="url(#Gradient01)" />
                 <rect x="175" y="25" width="50" height="50" fill="url(#stripe)" />
                 <use href="#lionContainer" x="200" mask="url(#lionMask)"/>
-                <image id="lionContainer" href="/assets/images/guides/lion_cracker.webp" x="390" y="15" width="100" height="100" viewBox="0 0 100 100" clipPath="url(#myClip)" />
+                <image id="lionContainer" href={`${process.env.pathPrefix}/assets/images/guides/lion_cracker.webp`} x="390" y="15" width="100" height="100" viewBox="0 0 100 100" clipPath="url(#myClip)" />
                 <line x1="325" y1="25" x2="375" y2="75" markerEnd="url(#Triangle2)" />
                 <use href="#card" x="475" y="25" width="75" height="75"/>
               </svg>
@@ -247,7 +247,7 @@ const PaintingPage = ({lastUpdated}) => {
                   <circle className="circle1" cx="50" cy="50" r="20" />
                 </g>
               </svg> */}
-              <img width={mediaWidth} height="auto" src="/assets/images/guides/mediaquery.svg" />
+              <img width={mediaWidth} height="auto" src={`${process.env.pathPrefix}/assets/images/guides/mediaquery.svg`} />
             </div>
           </section>
           <section id="gradients">

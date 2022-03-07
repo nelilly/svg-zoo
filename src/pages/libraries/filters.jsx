@@ -98,7 +98,7 @@ const FiltersPage = ({lastUpdated}) => {
                     </feComponentTransfer>
                   </filter>
                   
-                  <image href="/assets/images/vulture-600x400.jpg" x="0" y="0" width="600" height="400" filter="url(#duotone)"></image>
+                  <image href={`${process.env.pathPrefix}/assets/images/vulture-600x400.jpg`} x="0" y="0" width="600" height="400" filter="url(#duotone)"></image>
                 </svg>
               </div>
               <div></div>

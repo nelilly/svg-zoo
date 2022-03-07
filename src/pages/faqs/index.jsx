@@ -48,7 +48,7 @@ const LinksPage = ({lastUpdated}) => {
             <details>
               <summary>What&rsquo;s so important about SVGs?</summary>
               <div>
-                <p>Aside from the many <Link href="/guides/understanding-svgs/#benefits">benefits</Link> of SVGs...</p>
+                <p>Aside from the many <Link href={`${process.env.pathPrefix}/guides/understanding-svgs/#benefits`}>benefits</Link> of SVGs...</p>
                 <p>Personally, learning how to hand-code SVGs has helped me make performant, easily maintained data-visualization dashboards and website user-interfaces. I enjoy using code as a canvas.</p>
               </div>
             </details>

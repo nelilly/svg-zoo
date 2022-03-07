@@ -35,9 +35,9 @@ const LibrariesPage = ({lastUpdated}) => {
           <Hero title="SVG Libraries" description={description} />
           <section>
             <ul>
-              <li><Link href="/libraries/gradients/">Gradients</Link></li>
-              <li><Link href="/libraries/patterns/">Patterns</Link></li>
-              <li><Link href="/libraries/filters/">Filters</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/libraries/gradients/`}>Gradients</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/libraries/patterns/`}>Patterns</Link></li>
+              <li><Link href={`${process.env.pathPrefix}/libraries/filters/`}>Filters</Link></li>
             </ul>
           </section>
           {/* <section id="to_do">

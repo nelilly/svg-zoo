@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="boopAMole" viewBox="0,0 1920,1080">
+  <defs>
+    <script>
+      let score = 0;
+      function popDownTime() {
+        return (Math.floor(Math.random() * Math.floor(8))) * 100;
+      }
+      function popUpTime() {
+        return (Math.floor(Math.random() * Math.floor(7)) + 2) * 1000;
+      }
+      function start(event) {
+        event.currentTarget.classList.add('hide');
+        document.querySelectorAll('.mole').forEach(item => {
+          setTimeout(() => item.classList.add('down'), popDownTime());
+          setTimeout(() => item.classList.remove('down'),  popUpTime());
+        });
+      }
+      function restart(event) {
+        const scoreBoard = document.querySelector('.scoreValue');
+        score = 0;
+        scoreBoard.innerHTML = score;
+        event.currentTarget.classList.add('hide');
+        document.querySelector('#moleWin').classList.remove('show');
+        document.querySelectorAll('.mole').forEach(item => {
+          setTimeout(() => item.classList.add('down'), popDownTime());
+          setTimeout(() => item.classList.remove('down'),  popUpTime());
+        });
+      }
+      function win() {
+        document.querySelector('#moleWin').classList.remove('hide');
+        document.querySelector('#moleWin').classList.add('show');
+      }
+      function hit(event) {
+        const scoreBoard = document.querySelector('.scoreValue');
+        if (!event.target.classList.contains('down')) {
+          event.target.classList.add('down');
+          let i = setTimeout(() => event.target.classList.remove('down'), popUpTime());
+          scoreBoard.innerHTML = ++score;
+          if(score >= 10) {
+            while(i--) { clearTimeout(i+1); };
+            document.querySelectorAll('.mole').forEach(item => {
+              setTimeout(() => item.classList.add('down'), popDownTime());
+            });
+            setTimeout(() => win(), 300);
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;900');
+      #boopAMole {
+        cursor: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='100' height='100'%3e%3cstyle%3e.st0%7bfill:url(%23bopper)%7d%3c/style%3e%3cg transform='rotate(-45 50 50)'%3e%3clinearGradient id='bopper' x1='40' x2='90' y1='0' y2='0' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0%25' stop-color='%23aaa'/%3e%3cstop offset='50%25' stop-color='%23eee'/%3e%3cstop offset='100%25' stop-color='%23aaa'/%3e%3c/linearGradient%3e%3cpath fill='%23000' d='M49.3 48.6h4.2v17.8h-4.2z'/%3e%3cpath d='M64.2 49.6H38.6c-6.5 0-11.7-5.3-11.7-11.7v-23c0-6.5 5.3-11.7 11.7-11.7h25.6C70.7 3.1 76 8.4 76 14.9v23c0 6.4-5.3 11.7-11.8 11.7z' class='st0'/%3e%3cpath d='M53.7 96.9h-4.5c-2.4 0-4.3-1.9-4.3-4.3V70.4c0-2.4 1.9-4.3 4.3-4.3h4.5c2.4 0 4.3 1.9 4.3 4.3v22.2c0 2.4-1.9 4.3-4.3 4.3z' fill='%23900'/%3e%3c/g%3e%3c/svg%3e") 35 35, auto;
+        transition: transform cubic-bezier(0,1.66,1,1) 500ms;
+        font-family: "Fraunces", serif;
+        font-variation-settings: 'wght' 333;
+      }
+      #boopAMole:active {
+        cursor: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='100' height='100'%3e%3cstyle%3e.st0%7bfill:url(%23bopper)%7d%3c/style%3e%3cg transform='rotate(-90 50 50)'%3e%3clinearGradient id='bopper' x1='40' x2='90' y1='0' y2='0' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0%25' stop-color='%23aaa'/%3e%3cstop offset='50%25' stop-color='%23eee'/%3e%3cstop offset='100%25' stop-color='%23aaa'/%3e%3c/linearGradient%3e%3cpath fill='%23000' d='M49.3 48.6h4.2v17.8h-4.2z'/%3e%3cpath d='M64.2 49.6H38.6c-6.5 0-11.7-5.3-11.7-11.7v-23c0-6.5 5.3-11.7 11.7-11.7h25.6C70.7 3.1 76 8.4 76 14.9v23c0 6.4-5.3 11.7-11.8 11.7z' class='st0'/%3e%3cpath d='M53.7 96.9h-4.5c-2.4 0-4.3-1.9-4.3-4.3V70.4c0-2.4 1.9-4.3 4.3-4.3h4.5c2.4 0 4.3 1.9 4.3 4.3v22.2c0 2.4-1.9 4.3-4.3 4.3z' fill='%23900'/%3e%3c/g%3e%3c/svg%3e") 35 35, auto;
+      }
+      .mole {
+        transition: transform cubic-bezier(0, -0.66, 0.735, 0.045) 300ms;
+      }
+      .down {
+        transition: transform cubic-bezier(0,1.66,1,1) 300ms;
+        transform: translateY(266px);
+      }
+      .score {
+        fill: white;
+        font-size:120px;
+        font-variation-settings: 'wght' 555;
+        stroke:none;
+        text-anchor: left;
+      }
+      .moleCard {
+        fill: #ccb;
+      }
+      .moleCardText {
+        fill: #b00;
+        font-size: 120px;
+        font-variation-settings: 'wght' 555;
+        letter-spacing: -3px;
+        stroke: none;
+        text-anchor: middle;
+      }
+      .moleTitle {
+        fill: #b00;
+        filter: url(#titleShadow);
+        font-size: 180px;
+        font-variation-settings: 'wght' 900;
+        letter-spacing: -10px;
+        paint-order: stroke;
+        stroke: #000;
+        stroke-width: 10;
+        text-anchor: middle;
+      }
+      .hide {
+        animation-duration: 500ms;
+        animation-name: fade-out;
+        transform: translateX(100%);
+        transition: transform 0ms linear 500ms;
+      }
+      #moleWin {
+        transform: translateX(100%);
+      }
+      #moleWin.show {
+        transform: translateX(0%);
+        animation-duration: 500ms;
+        animation-name: fade-in;
+      }
+
+      @keyframes fade-in {
+        from {opacity: 0}
+        to {opacity: 1}
+      }
+
+      @keyframes fade-out {
+        from {opacity: 1}
+        to {opacity: 0}
+      }
+    </style>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="30" />
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer result="newImage">
+        <feFuncR type="discrete" tableValues="0 0 .5 1 .1" />
+        <feFuncG type="discrete" tableValues="0 0 .5 1 .1" />
+        <feFuncB type="discrete" tableValues="0 0 .5 1 .1" />
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="newImage" mode="multiply" />
+    </filter>
+    <filter id="titleShadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="1" flood-color="#0006" />
+    </filter>
+    <mask id="moleHoleMask1"><rect fill="#fff" stroke="none" x="210" y="540" width="300" height="360" rx="300" ry="50" /><!-- <circle fill="#fff" stroke="none" cx="360" cy="600" r="300" /> --></mask>
+    <mask id="moleHoleMask2"><rect fill="#fff" stroke="none" x="510" y="340" width="300" height="360" rx="300" ry="50" /></mask>
+    <mask id="moleHoleMask3"><rect fill="#fff" stroke="none" x="810" y="540" width="300" height="360" rx="300" ry="50" /></mask>
+    <mask id="moleHoleMask4"><rect fill="#fff" stroke="none" x="1110" y="340" width="300" height="360" rx="300" ry="50" /></mask>
+    <mask id="moleHoleMask5"><rect fill="#fff" stroke="none" x="1410" y="540" width="300" height="360" rx="300" ry="50" /></mask>
+    <linearGradient id="moleGrass" gradientUnits="userSpaceOnUse" x1="960" y1="0%" x2="960" y2="100%">
+      <stop  offset="0%" stop-color="#3c3"/>
+      <stop  offset="100%" stop-color="#363"/>
+    </linearGradient>
+
+    <symbol id="mole" viewBox="0,0 300,400" height="400" width="300">
+      <defs>
+        <style>.moleEye{fill:#0a0a09}.moleTwinkle{fill:#ccc}.mole4{fill:none;stroke:#191917;stroke-width:4;stroke-linecap:round;}.mole7{fill:#ff6d5b}</style>
+        <linearGradient id="moleBody" x1="151.8" x2="151.8" y1="388.4" y2="11.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#5a5451"/></linearGradient>
+        <radialGradient id="moleBelly" cx="155" cy="244.7" r="96.6" fx="157.5" fy="285.5" gradientTransform="matrix(1 0 0 1.4 0 -98)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a8716f"/><stop offset=".5" stop-color="#524d4b"/><stop offset=".8" stop-color="#524d4b" stop-opacity="0"/></radialGradient>
+        <radialGradient id="moleSnout" cx="256.2" cy="85.5" r="90.4" gradientTransform="matrix(1.3605 0 0 1 -95 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb7b2"/><stop offset=".5" stop-color="#524d4b"/><stop offset=".8" stop-color="#524d4b" stop-opacity="0"/></radialGradient>
+        <linearGradient id="moleNails" x1="43.8" x2="43.8" y1="300" y2="200" gradientTransform="rotate(-7 52 242)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c7b299"/><stop offset="1" stop-color="#5a544f"/></linearGradient>
+        <linearGradient id="SVGID_5_" x1="65.5" x2="65.5" y1="300" y2="220.4" gradientTransform="rotate(-5 72 239)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c7b299"/><stop offset="1" stop-color="#403d3b"/></linearGradient>
+        <linearGradient id="SVGID_6_" x1="92.1" x2="92.1" y1="310.7" y2="210" gradientTransform="scale(.99999) rotate(3 96 236)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c7b299"/><stop offset="1" stop-color="#403d3b"/></linearGradient>
+        <linearGradient id="SVGID_7_" x1="114.2" x2="114.2" y1="294.9" y2="215.3" gradientTransform="rotate(4 116 238)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c7b299"/><stop offset="1" stop-color="#403d3b"/></linearGradient>
+        <linearGradient id="SVGID_8_" x1="211.5" x2="211.5" y1="284.8" y2="205.2" gradientTransform="scale(-1 1) rotate(-7 -183 4212)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c7b299"/><stop offset="1" stop-color="#403d3b"/></linearGradient>
+        <linearGradient id="SVGID_9_" x1="232.7" x2="232.7" y1="277.4" y2="197.8" gradientTransform="scale(-1 1) rotate(-5 -162 5405)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c7b299"/><stop offset="1" stop-color="#403d3b"/></linearGradient>
+        <linearGradient id="SVGID_10_" x1="254.1" x2="254.1" y1="263.7" y2="162.9" gradientTransform="matrix(-.9983 .05806 .05806 .9983 455 -5)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c7b299"/><stop offset="1" stop-color="#403d3b"/></linearGradient>
+        <linearGradient id="SVGID_11_" x1="276.1" x2="276.1" y1="247.3" y2="167.7" gradientTransform="scale(-1 1) rotate(4 -119 -7346)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c7b299"/><stop offset="1" stop-color="#403d3b"/></linearGradient>
+        <radialGradient id="molePaw1" cx="248.2" cy="256.1" r="97.8" fx="244.4" fy="158.4" gradientTransform="rotate(-153 268 28) scale(1 -.5)" gradientUnits="userSpaceOnUse"><stop offset=".3" stop-color="#464240"/><stop offset="1" stop-color="#2a2727"/></radialGradient>
+        <radialGradient id="molePaw2" cx="481.4" cy="415.7" r="97.8" fx="477.6" fy="318" gradientTransform="rotate(-27 296 1017) scale(1 .5)" gradientUnits="userSpaceOnUse"><stop offset=".3" stop-color="#464240"/><stop offset="1" stop-color="#222121"/></radialGradient>
+      </defs>
+      <path fill="url(#moleBody)" d="M257 86c-4-41-47-74-105-74S51 45 47 86c-3 39-23 116-26 156-7 80 58 146 131 146s138-66 131-146c-3-40-23-117-26-156z"/>
+      <ellipse cx="155" cy="244.7" fill="url(#moleBelly)" rx="81.8" ry="109.4"/>
+      <circle cx="136.1" cy="79" r="7.9" class="moleEye"/><circle cx="139.1" cy="76.4" r="2.1" class="moleTwinkle"/>
+      <circle cx="233.5" cy="55.3" r="7.9" class="moleEye"/><circle cx="236.5" cy="52.8" r="2.1" class="moleTwinkle"/>
+      <path fill="url(#moleSnout)" d="M200 43l63 29-4 26s-74 30-96 20c-16-28-1-60 36-75h1z"/><path fill="#ffb7b2" d="M262 97l-22 4c-7 1-14-4-15-11v-1c-1-8 4-14 11-16l21-3c7-1 14 4 15 11l1 1c1 7-4 14-11 15z"/><path d="M239 94l8-1-1-7c-1-4-5-7-9-6-4 0-7 4-6 8s4 7 8 6zM253 92l7-1c4-1 7-5 7-9-1-4-5-7-9-6s-7 5-6 9l1 7" class="mole7"/>
+      <path d="M256 37c-9-6-50-10-71 9M170 47c-9-7-51-11-71 8" class="mole4"/>
+      <path d="M163 116c13 15 78-11 78-11s3 3 1 9" class="mole4"/>
+      <path fill="url(#moleNails)" d="M54 252c2 17 2 51-3 51-5 1-13-32-15-49-2-16 1-29 6-30s10 12 12 28zM75 250c2 16 1 50-4 50-5 1-12-33-13-49s1-29 6-30c5 0 10 12 11 29zM100 247c-1 21-7 64-12 63-5 0-7-43-5-64 1-20 6-37 11-36s7 17 6 37zM123 245c-1 16-7 50-12 50-5-1-7-35-6-51s6-29 11-29 8 14 7 30zM250 215c-2 16-2 50 3 51 5 0 13-33 15-49s-1-30-6-30c-4-1-10 12-12 28zM229 212c-2 16-1 50 4 51 5 0 12-33 13-50s-1-29-6-30c-5 0-10 13-11 29zM204 210c1 20 7 63 12 63s7-44 5-64-6-37-10-37-8 17-7 38zM182 208c1 16 7 49 11 49 5 0 7-34 6-51s-6-29-11-28-7 13-6 30z"/>
+      <path fill="url(#molePaw1)" d="M180 161c-9 15 9 40 38 55s60 14 68-2c8-15-9-40-39-55-29-15-59-14-67 2z"/>
+      <path fill="url(#molePaw2)" d="M129 197c8 16-9 41-38 56-30 15-60 14-68-2s9-41 38-56c30-15 60-14 68 2z"/>
+    </symbol>
+    <path id="titlePath" d="m100,740 q870,-600 1720,0" />
+  </defs>
+  <g filter="url(#noise)">
+    <g id="moleBoard">
+      <rect y="0%" width="100%" height="100%" fill="url(#moleGrass)" />
+      <text class="score" x="100" y="150">Score: <tspan class="scoreValue">0</tspan></text>
+    </g>
+
+    <g id="moleLabor">
+      <g mask="url(#moleHoleMask1)" >
+        <ellipse cx="360" cy="850" rx="150" ry="50" />
+        <use x="210" y="550" href="#mole" class="mole" onclick="hit(event)" fill="red" />
+      </g>
+      <g mask="url(#moleHoleMask2)" >
+        <ellipse cx="660" cy="650" rx="150" ry="50" />
+        <use x="510" y="350" href="#mole" class="mole" onclick="hit(event)" />
+      </g>
+      <g mask="url(#moleHoleMask3)" >
+        <ellipse cx="960" cy="850" rx="150" ry="50" />
+        <use x="810" y="550" href="#mole" class="mole" onclick="hit(event)" />
+      </g>
+      <g mask="url(#moleHoleMask4)" >
+        <ellipse cx="1260" cy="650" rx="150" ry="50" />
+        <use x="1110" y="350" href="#mole" class="mole" onclick="hit(event)" />
+      </g>
+      <g mask="url(#moleHoleMask5)" >
+        <ellipse cx="1560" cy="850" rx="150" ry="50" />
+        <use x="1410" y="550" href="#mole" class="mole" onclick="hit(event)" />
+      </g>
+    </g>
+
+    <g id="moleWin" onclick="restart(event)">
+      <rect width="100%" height="100%" fill="#000c" />
+      <rect class="moleCard" x="20%" y="15%" width="60%" height="50%" rx="45" stroke="#000" stroke-width="10" fill="#fff" />
+      <text class="moleCardText" x="50%" y="36%">You booped</text>
+      <text class="moleCardText" x="50%" y="54%">10 moles!</text>
+    </g>
+
+    <g id="moleLoading" onclick="start(event)">
+      <rect width="100%" height="100%" fill="#000c" />
+      <use x="400" y="50" href="#mole" class="mole" />
+      <rect class="moleCard" x="20%" y="25%" width="60%" height="50%" rx="45" stroke="#000" stroke-width="10" fill="#fff" />
+      <text class="moleTitle" x="50%">
+        <textPath href="#titlePath">BOOP•A•MOLE!</textPath>
+      </text>
+      <text class="moleCardText" x="50%" y="55%">{ Play }</text>
+    </g>
+  </g>
+</svg>

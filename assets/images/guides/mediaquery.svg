@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0 100,100">
+			<defs>
+				<style>
+				.circle1 {
+					fill: rgba(255, 0, 0, 0.3);
+				}
+				.go {
+					fill: green;
+				}
+				@media only screen and (min-width: 401px) {
+					.small { display: none; }
+				}
+				@media only screen and (max-width: 400px) {
+					.medium { display: none; }
+				}
+				</style>
+			</defs>
+			<g class="small">
+				<circle class="go circle1" cx="50" cy="50" r="25" />
+			</g>
+			<g class="medium">
+				<circle class="circle1" cx="50" cy="50" r="33" />
+				<circle class="circle1" cx="50" cy="50" r="25" />
+				<circle class="circle1" cx="50" cy="50" r="20" />
+			</g>
+		</svg>

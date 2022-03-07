@@ -17,7 +17,7 @@ const Breadcrumbs = ({labels}) => {
       return <li key={item.url}>{item.label}</li>;
     } else {
       // not last one
-      return <li key={item.url}><Link href={item.url}>{item.label}</Link></li>;
+      return <li key={item.url}><Link href={`${process.env.pathPrefix}${item.url}`}>{item.label}</Link></li>;
     }
   })
 

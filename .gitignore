@@ -1,0 +1,20 @@
+# Node
+/node_modules/*
+npm-debug.log
+yarn-error.log
+.eslintcache
+
+# Testing
+coverage/
+src/js/coverage/
+.nyc_output/
+
+# App
+/.next/*
+/build/
+
+# IDE
+.vscode/*
+
+# Platform
+.DS_Store

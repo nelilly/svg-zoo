@@ -1,0 +1,67 @@
+.shelf {
+  border-bottom: .4rem solid #000;
+  border-top: .4rem solid #000;
+  color: #000;
+  margin: 0 calc(50% - 50vw);
+  padding: 2rem 5%;
+}
+
+.shelfTitle {
+  color: inherit;
+}
+
+.bookList {
+  display: block;
+  overflow: auto;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: 100vw;
+  padding: 1rem 5%;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+  width: 100vw;
+}
+
+.book {
+  display: inline-block;
+  margin: 1rem 2rem 1rem .5rem;
+  padding: 0 0 0 3rem;
+  vertical-align: top;
+  white-space: normal;
+  width: 16rem;
+  scroll-snap-align: start;
+}
+
+.book:last-child {
+  width: 8rem;
+}
+
+.book > img {
+  height: 15rem;
+}
+
+.moreArrow {
+  color: currentColor;
+  display: block;
+  border: .2rem solid currentColor;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  height: 4rem;
+  margin: 0 auto;
+  padding: .15rem .3rem;
+  width: 4rem;
+}
+
+.moreButton:hover,
+.moreButton:focus {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.moreButton {
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  margin-top: 6rem;
+  text-align: center;
+}

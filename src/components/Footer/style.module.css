@@ -1,0 +1,88 @@
+.siteFooter {
+  background-color: #d6c6a8;
+  background-color: #afd4af;
+  background-color: #9fd244;
+  background-color: #609070;
+  background-color: #925bff;
+  background-color: #226637;
+  /* background-image: linear-gradient(-33deg, #e13496 20%, #925bff 80%);  */
+  /* background-image: linear-gradient(20deg, #2cbe1e 20%, #8eff3133 40%, #f4ff5b00 50%), linear-gradient(-20deg, #10923b 20%, #5bb5ff 80%);  */
+  /* background-image: linear-gradient(-33deg, #10923b 20%, #445c70 80%);  */
+  background-attachment: fixed;
+  border-top: .1rem solid #000;
+  color: #fff;
+  padding: 2rem;
+}
+
+.siteFooter a {
+  color: #6f6;
+}
+
+.siteFooter .legal {
+  font-size: .8rem;
+}
+.siteFooter .legal p {
+  margin: 0;
+}
+
+.siteFooter > section {
+  padding: 1rem;
+}
+
+.connectionList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.connectionItem {
+  display: block;
+  flex-basis: 25%;
+  margin-bottom: 0.75rem;
+}
+
+
+.connectionItem a {
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  border-radius: 3rem;
+  color: #000;
+  outline: none;
+  padding: 0.5rem;
+  height: 3rem;
+  display: inline-block;
+}
+
+.connectionItem a:hover,
+.connectionItem a:focus {
+  background-color: #6f6;
+}
+
+.connectionItem svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+@media (min-width: 61.25rem) {
+  .siteFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5rem;
+  }
+
+  .siteFooter .about {
+    width: 66%;
+  }
+
+  .siteFooter .connect {
+    width: 33%;
+  }
+
+  .siteFooter .legal {
+    width: 100%;
+  }
+}

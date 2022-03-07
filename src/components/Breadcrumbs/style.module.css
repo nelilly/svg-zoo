@@ -1,0 +1,16 @@
+.breadcrumbs {
+  display: flex;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.breadcrumbs > li {
+  display: inline;
+}
+
+.breadcrumbs > li:not(:last-child)::after {
+  color: #676767;
+  content: '\027A4';
+  /* font-size: .5rem; */
+  padding: 0rem .5rem 0rem .2rem;
+}

@@ -32,6 +32,7 @@ const ArcPathVisualizerPage = ({lastUpdated}) => {
   const [meetOrSlice, setSlice] = useState('');
   const [ratio, setRatio] = useState('');
   
+  const [absolutePath, setAbsolutePath] = useState(false);
   const [arcOriginX, setPathOriginX] = useState(33);
   const [arcOriginY, setPathOriginY] = useState(33);
   const [arcRadiusX, setArcRadiusX] = useState(33);
@@ -42,12 +43,12 @@ const ArcPathVisualizerPage = ({lastUpdated}) => {
   const [arcEndX, setArcEndX] = useState(33);
   const [arcEndY, setArcEndY] = useState(33);
 
-  const [displayPath, setDisplayPath] = useState(`<path d="m${arcOriginX},${arcOriginY} a${arcRadiusX},${arcRadiusY} ${rotation} ${arcFlag} ${sweepFlag} ${arcEndX},${arcEndY}" />`);
+  const [displayPath, setDisplayPath] = useState(`<path d="m${arcOriginX},${arcOriginY} ${absolutePath ? 'A' : 'a'}${arcRadiusX},${arcRadiusY} ${rotation} ${arcFlag} ${sweepFlag} ${arcEndX},${arcEndY}" />`);
   
 
   useEffect(() => {
-    setDisplayPath(`<path d="m${arcOriginX},${arcOriginY} a${arcRadiusX},${arcRadiusY} ${rotation} ${arcFlag} ${sweepFlag} ${arcEndX},${arcEndY}" />`);
-  },[arcOriginX,arcOriginY,arcRadiusX,arcRadiusY,rotation,arcFlag,sweepFlag,arcEndX,arcEndY]);
+    setDisplayPath(`<path d="m${arcOriginX},${arcOriginY} ${absolutePath ? 'A' : 'a'}${arcRadiusX},${arcRadiusY} ${rotation} ${arcFlag} ${sweepFlag} ${arcEndX},${arcEndY}" />`);
+  },[arcOriginX,arcOriginY,absolutePath,arcRadiusX,arcRadiusY,rotation,arcFlag,sweepFlag,arcEndX,arcEndY]);
 
   useEffect(() => {
     setViewBox(`${originX},${originY} ${viewboxWidth},${viewboxHeight}`);
@@ -56,6 +57,7 @@ const ArcPathVisualizerPage = ({lastUpdated}) => {
   const handleExample = (svg) => {
     switch (svg) {
       case 'NearCircle':
+        setAbsolutePath(false);
         setPathOriginX(20);
         setPathOriginY(50);
         setArcRadiusX(30);
@@ -67,6 +69,7 @@ const ArcPathVisualizerPage = ({lastUpdated}) => {
         setArcEndY(1);
         break;
       case 'HalfCircle':
+        setAbsolutePath(false);
         setPathOriginX(20);
         setPathOriginY(50);
         setArcRadiusX(30);
@@ -78,6 +81,7 @@ const ArcPathVisualizerPage = ({lastUpdated}) => {
         setArcEndY(0);
         break;
       case 'OffCenter':
+        setAbsolutePath(false);
         setPathOriginX(3);
         setPathOriginY(45);
         setArcRadiusX(12);
@@ -89,6 +93,7 @@ const ArcPathVisualizerPage = ({lastUpdated}) => {
         setArcEndY(0);
         break;
       case 'Oval':
+        setAbsolutePath(false);
         setPathOriginX(7);
         setPathOriginY(63);
         setArcRadiusX(35);
@@ -134,6 +139,10 @@ const ArcPathVisualizerPage = ({lastUpdated}) => {
 
   const handleMeetOrSlice = (event) => {
     setSlice(event.target.checked ? 'slice': '');
+  }
+
+  const handleAbsolutePath = () => {
+    setAbsolutePath(!absolutePath);
   }
 
   const handlePathOriginX = (event) => {
@@ -246,6 +255,9 @@ const ArcPathVisualizerPage = ({lastUpdated}) => {
               </details>
               <div className="container" style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem'}}>
                 <div>
+                  <label htmlFor="absolutePath">
+                    <input id="absolutePath" type="checkbox" onClick={handleAbsolutePath} /> {`Path is ${absolutePath ? 'Absolute' : 'Relative'}`}
+                  </label>
                   <label htmlFor="arc-origin-x">Path Origin X</label>
                   <input type="number" id="arc-origin-x" value={arcOriginX} onChange={(event) => handlePathOriginX(event)} onKeyUp={handlePathOriginX} />
                   <label htmlFor="arc-origin-y">Path Origin Y</label>

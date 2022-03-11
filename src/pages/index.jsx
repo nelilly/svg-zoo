@@ -42,7 +42,7 @@ const HomePage = ({lastUpdated}) => {
             <h2>SVG News</h2>
           </section> */}
           {/* New Exhibits */}
-          <Hero title="SVG ZOO" image="/assets/images/title.svg" description="The SVG ZOO is an establishment that maintains a collection of wild SVGs for study, conservation, and display to the public. It was created to explore the amazing and wonderful complexity that can be found in Scalable Vector Graphics." />
+          <Hero title="SVG ZOO" image="/assets/images/home_title.svg" description="The SVG ZOO is an establishment that maintains a collection of wild SVGs for study, conservation, and display to the public. It was created to explore the amazing and wonderful complexity that can be found in Scalable Vector Graphics." />
 
           <section>
             <h2>SVG Guides</h2>

@@ -23,6 +23,10 @@
   transform: translateX(-41%);
 }
 
+.cardTitle {
+  font-size: 1.2rem;
+}
+
 /* .featuredImage > img {
   border-radius: 100%;
   aspect-ratio: 1/1;
@@ -50,7 +54,7 @@
 @media (min-width: 640px) {
   .directory {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 3rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }

@@ -47,11 +47,13 @@ const HomePage = ({lastUpdated}) => {
           <section>
             <h2>SVG Guides</h2>
             <p>A series of guides exploring the features of SVG images.</p>
+            <div>
             {
               guides.map(item => {
                 return <Directory id={item.id} key={item.id} image={item.image} title={item.title} description={item.description} cta={item.cta} />
               })
             }
+            </div>
           </section>
 
           <section>

@@ -558,10 +558,6 @@ section:target > :is(h2, h3):after {
   main {
     padding: 1rem 2rem 0;
   }
-
-  main > article {
-    margin: 0 10rem 0;
-  }
   
   main > article > section {
     padding: 2rem 0;
@@ -578,5 +574,11 @@ section:target > :is(h2, h3):after {
   h1 {
     /* font-size: 3rem; */
     letter-spacing: -.1rem;
+  }
+
+  section > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }

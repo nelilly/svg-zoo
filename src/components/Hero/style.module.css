@@ -19,6 +19,7 @@
 }
 
 .hero h1 {
+  font-size: 2rem;
   line-height: 1;
 }
 
@@ -39,6 +40,10 @@
 }
 
 @media (min-width: 61.25rem) {
+  .hero h1 {
+    font-size: initial;
+  }
+
   .clip {
     width: 34%;
   }

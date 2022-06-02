@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Link from 'next/link';
+import { updateUrl } from 'src/shared/updateUrl';
 import Layout from 'src/components/Layout';
 import Hero from 'src/components/Hero';
 import Next from 'src/components/Next';
@@ -170,7 +171,7 @@ const UnderstandingPage = ({lastUpdated}) => {
                   // .filter(item => item.id === 3)
                   guides.filter(item => item.id !== 1).map(item => {
                     return <li key={`li${item.id}`}>
-                      <Link href={item.cta.url}>{item.title}</Link>
+                      <Link href={updateUrl(item.cta.url)}>{item.title}</Link>
                       <p>{item.description}</p>
                     </li>
                   })

@@ -23,9 +23,6 @@
       <stop offset="0%" stop-color="#fce4b8"/>
       <stop offset="100%" stop-color="#ecd4a8"/>
     </linearGradient>
-    <!-- <filter id="beeBlur" x="-30%" y="-30%" height="160%" width="160%">
-      <feGaussianBlur stdDeviation="1" />
-    </filter> -->
     <symbol id="bee" viewBox="0,0 300,300" style="overflow: visible">
       <svg viewBox="0,0 300,300" style="overflow: visible">
         <style type="text/css">
@@ -123,14 +120,6 @@
         </g>
       </svg>
     </symbol>
-    <symbol id="dancer">
-      <g>
-        <use href="#bee" height="444" width="444" id="dancingBee" />
-        <animateMotion dur="20s" repeatCount="indefinite" rotate="auto">
-          <mpath href="#buzzPath"/>
-        </animateMotion>
-      </g>
-    </symbol>
     <style>
       #dancingBee {
         animation: beeWiggle 10s infinite;
@@ -177,7 +166,7 @@
         }
       }
     </style>
-    <path id="buzzPath" d="m960,540a270,270 1 1 1 0,1a-270,-270 1 1 0 0,1z" fill="none" stroke="none" />
+    <path id="buzzPath" d="M960,540a270,270 1 1 1 0,1a270,270 1 1 0 0,1z" fill="none" stroke="none" />
   </defs>
   <g>
     <rect width="100%" height="100%" fill="url(#honey)"/>
@@ -197,6 +186,11 @@
     <g transform="translate(1700, 960) rotate(230)">
       <use href="#bee" height="444" width="444" style="animation: 15s ease-in 20s infinite beeWiggle;"  />
     </g>
-    <use href="#dancer" />
+    <g id="dancer">
+      <use href="#bee" height="444" width="444" id="dancingBee" />
+      <animateMotion dur="20s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#buzzPath" />
+      </animateMotion>
+    </g>
   </g>
 </svg>

@@ -45,13 +45,12 @@ const ProgrammingPage = ({lastUpdated}) => {
               <li>&lt;foreignObject&gt;</li>
             </ul>
           </section>
-          <object data="/assets/images/program_mole.svg"></object>
           <section id="object">
             <h2>&lt;object&gt;</h2>
             <p>The &lt;object&gt; element allows for interactivy in a linked file, much the same way that Adobe Flash used to be added to a page. Older (much older) browsers might require the use of &lt;embed&gt; to use the browser&rsquo;s SVG plugin.</p>
             <p>Some features of SVGs will not work unless the SVG is embedded directly in the HTML, or embedded onto the page using an &lt;object&gt; element.</p>
             <pre><code>&lt;object type="image/svg+xml" data="component.svg" width="100%" height="200" &gt;&lt;/object&gt;</code></pre>
-            <object type="image/svg+xml" data="/assets/images/guides/component.svg" width="200" height="200" ></object>
+            <object type="image/svg+xml" data={`${process.env.pathPrefix}/assets/images/guides/component.svg`} width="200" height="200" ></object>
             
             <p>Scripting and font imports don't work when the SVG is displayed using an &lt;img&gt; element.</p>
             <pre><code>&lt;img src="component.svg" width="100%" height="200" /&gt;</code></pre>

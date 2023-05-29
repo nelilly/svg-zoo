@@ -1,13 +1,5 @@
 .siteFooter {
-  background-color: #d6c6a8;
-  background-color: #afd4af;
-  background-color: #9fd244;
-  background-color: #609070;
-  background-color: #925bff;
   background-color: #226637;
-  /* background-image: linear-gradient(-33deg, #e13496 20%, #925bff 80%);  */
-  /* background-image: linear-gradient(20deg, #2cbe1e 20%, #8eff3133 40%, #f4ff5b00 50%), linear-gradient(-20deg, #10923b 20%, #5bb5ff 80%);  */
-  /* background-image: linear-gradient(-33deg, #10923b 20%, #445c70 80%);  */
   background-attachment: fixed;
   border-top: .1rem solid #000;
   color: #fff;
@@ -68,6 +60,11 @@
 
 @media (min-width: 61.25rem) {
   .siteFooter {
+    background-color: #226637;
+    background-attachment: fixed;
+    border-top: .1rem solid #000;
+    color: #fff;
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

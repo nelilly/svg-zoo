@@ -1,94 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:url(#SVGID_2_);}
-	/* .st2{fill:url(#SVGID_4_); filter: url(#cloud); transform: scale(.8);} */
-	.st3{fill:url(#SVGID_6_); filter: url(#cloud); transform: translate(430px, 120px) scale(.55);}
-	.st4{fill:url(#SVGID_7_); filter: url(#cloud); transform: translate(50px, -10px) scale(.8);}
-	.st5{fill:url(#SVGID_8_); filter: url(#cloud); transform: translate(-50px, -520px) scale(1.2);}
-	.st6{fill:url(#SVGID_9_); filter: url(#cloud); transform: translate(-200px, 0) scale(1.2);}
-</style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="960" y1="1080" x2="960" y2="0">
-	<stop  offset="0%" stop-color="#A7CAED"/>
-	<stop  offset="60%" stop-color="#29ABE2"/>
-	<stop  offset="100%" stop-color="#0071BC"/>
-</linearGradient>
-  <filter id="cloud" x="-500%" y="-500%" height="1000%" width="1000%">
-    <feTurbulence in="SourceGraphic" type="fractalNoise" baseFrequency=".025" numOctaves="24" seed="0" />
-    <feDisplacementMap in="SourceGraphic" scale="90" />
-    <feGaussianBlur stdDeviation="5" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+	<defs>
+	<linearGradient id="sky" gradientUnits="userSpaceOnUse" x1="960" y1="1080" x2="960" y2="0">
+		<stop  offset="0%" stop-color="#A7CAED"/>
+		<stop  offset="60%" stop-color="#29ABE2"/>
+		<stop  offset="100%" stop-color="#0071BC"/>
+	</linearGradient>
+	<linearGradient id="rabbit" gradientUnits="userSpaceOnUse" x1="1252.8186" y1="513.4296" x2="1252.8186" y2="1120.3105" gradientTransform="matrix(0.8853 0.4649 -0.4649 0.8853 369.6357 -389.1623)">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#EEEEEE"/>
+	</linearGradient>
+	
+	<filter id="cloud">
+		<feTurbulence in="SourceGraphic" type="fractalNoise" baseFrequency=".025" numOctaves="24" seed="0" />
+		<feDisplacementMap in="SourceGraphic" scale="90" />
+		<feGaussianBlur stdDeviation="5" />
 		<feColorMatrix type="matrix"
-        values=".8 0 0 0 0
-                0 .8 0 0 0
-                0 0 .8 0 0
-                0 0 0 1 0" result="cloudmass" />
-		
-    <feTurbulence in="SourceGraphic" type="fractalNoise" baseFrequency=".025" numOctaves="3" seed="2" />
-    <feDisplacementMap in="SourceGraphic" scale="90" result="c2" />
-    <feOffset in="c2" dx="-10" dy="-10" />
+				values=".8 0 0 0 0
+								0 .8 0 0 0
+								0 0 .8 0 0
+								0 0 0 1 0" result="cloudmass" />
+		<feTurbulence in="SourceGraphic" type="fractalNoise" baseFrequency=".025" numOctaves="3" seed="2" />
+		<feDisplacementMap in="SourceGraphic" scale="90" result="c2" />
+		<feOffset in="c2" dx="-10" dy="-10" />
 		<feColorMatrix type="matrix"
-        values="1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-                0 0 0 1 0" />
-    <feGaussianBlur stdDeviation="10" result="cloudlight" />
-		
-    <feTurbulence in="SourceGraphic" type="fractalNoise" baseFrequency=".025" numOctaves="24" seed="1" />
-    <feDisplacementMap in="SourceGraphic" scale="90" result="c1" />
+				values="1 0 0 0 0
+								0 1 0 0 0
+								0 0 1 0 0
+								0 0 0 1 0" />
+		<feGaussianBlur stdDeviation="10" result="cloudlight" />
+		<feTurbulence in="SourceGraphic" type="fractalNoise" baseFrequency=".025" numOctaves="24" seed="1" />
+		<feDisplacementMap in="SourceGraphic" scale="90" result="c1" />
 		<feMorphology in="c1" operator="erode" radius="10" result="c2"/>
-    <feOffset in="c2" dx="0" dy="30" />
+		<feOffset in="c2" dx="0" dy="30" />
 		<feColorMatrix type="matrix"
-        values=".5 0 0 0 0
-                0 .5 0 0 0
-                0 0 .5 0 0
-                0 0 0 .6 0" />
-    <feGaussianBlur stdDeviation="10" result="cloudshade" />
-
-    <feMerge result="merged">
-      <feMergeNode in="cloudmass" />
-      <feMergeNode in="cloudlight" />
-      <feMergeNode in="cloudshade" />
-    </feMerge>
-
+				values=".5 0 0 0 0
+								0 .5 0 0 0
+								0 0 .5 0 0
+								0 0 0 .6 0" />
+		<feGaussianBlur stdDeviation="10" result="cloudshade" />
+		<feMerge result="merged">
+			<feMergeNode in="cloudmass" />
+			<feMergeNode in="cloudlight" />
+			<feMergeNode in="cloudshade" />
+		</feMerge>
 		<feTurbulence in="merged" type="turbulence" baseFrequency=".0025" numOctaves="4" seed="1" />
-    <feDisplacementMap in="merged" scale="10" />
-  </filter>
-<rect x="-0.3" y="-0.5" class="st0" width="1920" height="1080"/>
-<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1932.3077" y1="572.3077" x2="1932.3077" y2="572.3077">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#EEEEEE"/>
-</linearGradient>
-<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="1932.3077" y1="572.3077" x2="1932.3077" y2="572.3077">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#EEEEEE"/>
-</linearGradient>
-<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-16.9231" y1="572.3077" x2="-16.9231" y2="572.3077">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#EEEEEE"/>
-</linearGradient>
-<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="-16.9231" y1="572.3077" x2="-16.9231" y2="572.3077">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#EEEEEE"/>
-</linearGradient>
-<path class="st2" d="M-16.9,572.3"/>
-<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="682.2352" y1="280" x2="682.2352" y2="990.4067" gradientTransform="matrix(-1 0 0 1 1800.3572 0)">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#EEEEEE"/>
-</linearGradient>
-<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="685.3113" y1="504.7403" x2="685.3113" y2="1183.8076" gradientTransform="matrix(0.9977 6.784496e-02 -6.784496e-02 0.9977 50.4088 -44.049)">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#EEEEEE"/>
-</linearGradient>
-<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="1252.8186" y1="513.4296" x2="1252.8186" y2="1120.3105" gradientTransform="matrix(0.8853 0.4649 -0.4649 0.8853 369.6357 -389.1623)">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#EEEEEE"/>
-</linearGradient>
-<path class="st5" d="M712.9,838.2c-0.4-18.8-67.6-4.6-89.5-53.2c-21.9-48.6,75.5-187,128.5-185.9c53,1.1,82,20.4,84.5,15.6
-	s28.6-125.1,72.9-134.8s33.1,101.8-7.9,148.3c52.6-17.7,97.7-72.3,132.6-64.3c34.9,8,0.5,136.3-93.5,146.6
-	c16.2,47.6,103.8,29.8,168.4,24.6c96.1-7.8,263.9,23.2,286.9,53.9c36.4-26.2,187.3-23.2,37.6,120.7c29.3,46.3-23.2,99.1,65.4,114.7
-	c50.6,8.9,22.7,172.6,11.6,193.6c-11,21-78.4,89.9-113.3-86.3c-11.9-59.8-184.9-138.3-255.3-125.8c-70.4,12.5-263.8-27.3-306.8-39.6
-	c-43-12.3-158.3,42.5-207.2,41.6c-48.9-1-30.9-86.3,39.1-117.5C736.9,859.1,712.9,838.2,712.9,838.2z"/>
+		<feDisplacementMap in="merged" scale="10" />
+	</filter>
+</defs>
+<rect x="-0.3" y="-0.5" class="st0" width="1920" height="1080" fill="url(#sky)" />
+<path fill="url(#rabbit)" filter="url(#cloud)" style="transform: translate(-50px, -520px) scale(1.2)" d="M712.9,838.2c-0.4-18.8-67.6-4.6-89.5-53.2c-21.9-48.6,75.5-187,128.5-185.9c53,1.1,82,20.4,84.5,15.6s28.6-125.1,72.9-134.8s33.1,101.8-7.9,148.3c52.6-17.7,97.7-72.3,132.6-64.3c34.9,8,0.5,136.3-93.5,146.6c16.2,47.6,103.8,29.8,168.4,24.6c96.1-7.8,263.9,23.2,286.9,53.9c36.4-26.2,187.3-23.2,37.6,120.7c29.3,46.3-23.2,99.1,65.4,114.7c50.6,8.9,22.7,172.6,11.6,193.6c-11,21-78.4,89.9-113.3-86.3c-11.9-59.8-184.9-138.3-255.3-125.8c-70.4,12.5-263.8-27.3-306.8-39.6c-43-12.3-158.3,42.5-207.2,41.6c-48.9-1-30.9-86.3,39.1-117.5C736.9,859.1,712.9,838.2,712.9,838.2z"/>
 </svg>

@@ -2,12 +2,12 @@
 const pathPrefix = process.env.NODE_ENV === 'production' ? '/svg-zoo' : '';
 
 module.exports = {
-  cssModules: true,
-  cssLoaderOptions: {
-    importLoaders: 1,
-    localIdentName: '[local]___[hash:base64:5]',
-    url: false,
-  },
+  // cssModules: true,
+  // cssLoaderOptions: {
+  //   importLoaders: 1,
+  //   localIdentName: '[local]___[hash:base64:5]',
+  //   url: false,
+  // },
   assetPrefix: pathPrefix,
   env: {
     PUBLIC_URL: "https://nelilly.github.io/svg-zoo",
@@ -37,7 +37,7 @@ module.exports = {
 
     return config;
   },
-  devIndicators: {
-    autoPrerender: false,
-  },
+  // devIndicators: {
+  //   autoPrerender: false,
+  // },
 };

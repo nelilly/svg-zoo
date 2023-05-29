@@ -171,7 +171,8 @@
     </symbol>
     <path id="titlePath" d="m100,740 q870,-600 1720,0" />
   </defs>
-  <g filter="url(#noise)">
+  <!-- <g filter="url(#noise)"> -->
+  <g>
     <g id="moleBoard">
       <rect y="0%" width="100%" height="100%" fill="url(#moleGrass)" />
       <text class="score" x="100" y="150">Score: <tspan class="scoreValue">0</tspan></text>
@@ -180,23 +181,23 @@
     <g id="moleLabor">
       <g mask="url(#moleHoleMask1)" >
         <ellipse cx="360" cy="850" rx="150" ry="50" />
-        <use x="210" y="550" href="#mole" class="mole" onclick="hit(event)" fill="red" />
+        <use x="210" y="550" height="400" width="300" href="#mole" class="mole" onclick="hit(event)" fill="red" />
       </g>
       <g mask="url(#moleHoleMask2)" >
         <ellipse cx="660" cy="650" rx="150" ry="50" />
-        <use x="510" y="350" href="#mole" class="mole" onclick="hit(event)" />
+        <use x="510" y="350" height="400" width="300" href="#mole" class="mole" onclick="hit(event)" />
       </g>
       <g mask="url(#moleHoleMask3)" >
         <ellipse cx="960" cy="850" rx="150" ry="50" />
-        <use x="810" y="550" href="#mole" class="mole" onclick="hit(event)" />
+        <use x="810" y="550" height="400" width="300" href="#mole" class="mole" onclick="hit(event)" />
       </g>
       <g mask="url(#moleHoleMask4)" >
         <ellipse cx="1260" cy="650" rx="150" ry="50" />
-        <use x="1110" y="350" href="#mole" class="mole" onclick="hit(event)" />
+        <use x="1110" y="350" height="400" width="300" href="#mole" class="mole" onclick="hit(event)" />
       </g>
       <g mask="url(#moleHoleMask5)" >
         <ellipse cx="1560" cy="850" rx="150" ry="50" />
-        <use x="1410" y="550" href="#mole" class="mole" onclick="hit(event)" />
+        <use x="1410" y="550" height="400" width="300" href="#mole" class="mole" onclick="hit(event)" />
       </g>
     </g>
 
@@ -209,7 +210,7 @@
 
     <g id="moleLoading" onclick="start(event)">
       <rect width="100%" height="100%" fill="#000c" />
-      <use x="400" y="50" href="#mole" class="mole" />
+      <use x="400" y="50" href="#mole" class="mole" height="400" width="300" />
       <rect class="moleCard" x="20%" y="25%" width="60%" height="50%" rx="45" stroke="#000" stroke-width="10" fill="#fff" />
       <text class="moleTitle" x="50%">
         <textPath href="#titlePath">BOOP•A•MOLE!</textPath>
